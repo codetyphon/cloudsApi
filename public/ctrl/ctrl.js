@@ -44,7 +44,7 @@ $(document).ready(function(){
             if(result==="status=off"){
                 console.log('off');
                 $('.switch[switch=led_off]').attr('class','switch weui_btn weui_btn_primary');
-                $('.switch[switch=led_on]').text('led off');
+                $('.switch[switch=led_off]').text('led off');
 
             }
         });
@@ -63,7 +63,7 @@ $(document).ready(function(){
             if(result==="status=off"){
                 console.log('off');
                 $('.switch[switch=lamp_off]').attr('class','switch weui_btn weui_btn_primary');
-                $('.switch[switch=lamp_on]').text('led off');
+                $('.switch[switch=lamp_off]').text('led off');
             }
         });
     }
