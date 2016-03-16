@@ -4,7 +4,7 @@ var db= require('../lib/db.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: '蜗牛派｜一站式物联网解决方案 & 物联网培训 & 物联网和机器人的发烧友聚乐部',h1:'蜗牛派',h2:'一站式物联网解决方案' });
 });
 
 /* 历史遗留问题 */

@@ -1,19 +1,28 @@
-*{
-  margin: 0;
-  padding: 0;
+* {
+    margin: 0;
+    padding: 0;
 }
+
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
 }
 
-.box{
-  padding: 10px;
+.box {
+    padding: 10px;
 }
 
-.button_sp_area{
-  margin: 20px auto;
+.button_sp_area {
+    margin: 20px auto;
+}
+
+input {
+    padding: 5px;
+}
+
+label {
+    width: 80px;
 }
