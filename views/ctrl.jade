@@ -3,8 +3,8 @@ extends layout
 block content
   h1= title
   p='LED and Lamp turn on/off demo:'
-  button.switch.weui_btn.weui_btn_primary(switch='led_on')='led on'
-  button.switch.weui_btn.weui_btn_default(switch='led_off')='led off'
-  button.switch.weui_btn.weui_btn_primary(switch='lamp_on')='lamp on'
-  button.switch.weui_btn.weui_btn_primary(switch='lamp_off')='lamp off'
+  button.switch.weui_btn(switch='led_on')='led on'
+  button.switch.weui_btn(switch='led_off')='led off'
+  button.switch.weui_btn(switch='lamp_on')='lamp on'
+  button.switch.weui_btn(switch='lamp_off')='lamp off'
   script(src='/ctrl/ctrl.js')
