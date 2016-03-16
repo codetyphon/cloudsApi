@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0da9352f-6e4e-437e-af5b-e0ca6e24b317" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/ctrl.jade" afterPath="$PROJECT_DIR$/views/ctrl.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/ctrl/ctrl.js" afterPath="$PROJECT_DIR$/public/ctrl/ctrl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/db.js" afterPath="$PROJECT_DIR$/lib/db.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
     </list>
     <ignored path="cloudsApi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -66,20 +63,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ctrl.jade" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ctrl.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/ctrl.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.7">
-              <caret line="9" column="11" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="11" />
+            <state vertical-scroll-proportion="0.28425655">
+              <caret line="13" column="34" selection-start-line="10" selection-start-column="4" selection-end-line="13" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ctrl.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ctrl.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/ctrl/ctrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.5896739">
+            <state vertical-scroll-proportion="0.0">
               <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
               <folding />
             </state>
@@ -115,8 +112,8 @@
         <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/lib/db.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/views/ctrl.jade" />
         <option value="$PROJECT_DIR$/public/ctrl/ctrl.js" />
+        <option value="$PROJECT_DIR$/views/ctrl.jade" />
       </list>
     </option>
   </component>
@@ -412,18 +409,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/ctrl.jade">
+    <entry file="file://$PROJECT_DIR$/public/ctrl/ctrl.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7">
-          <caret line="9" column="11" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/ctrl/ctrl.js">
+    <entry file="file://$PROJECT_DIR$/views/ctrl.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5896739">
-          <caret line="78" column="22" selection-start-line="78" selection-start-column="22" selection-end-line="78" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.28425655">
+          <caret line="13" column="34" selection-start-line="10" selection-start-column="4" selection-end-line="13" selection-end-column="34" />
           <folding />
         </state>
       </provider>
