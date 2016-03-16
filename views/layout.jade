@@ -7,4 +7,14 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     script(src='/javascripts/jquery.min.js')
   body
-    block content
+    div.weui_tab
+        div.weui_tab_bd
+        div.weui_navbar
+            a.weui_navbar_item.weui_bar_item_on
+                p.weui_tabbar_label='home'
+            a.weui_navbar_item
+                p.weui_tabbar_label='download'
+            a.weui_navbar_item
+                p.weui_tabbar_label='about'
+    div.box
+      block content
