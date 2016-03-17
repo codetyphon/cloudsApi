@@ -8,8 +8,10 @@ router.get('/', function (req, res, next) {
         res.render('zndex', {title: 'zootopia times'});
     } else if(req.host.indexOf('nickvpn.com') != -1){
         res.render('nickvpn', {title: 'nick vpn'});
-    }else {
+    }else if(req.host.indexOf('snailpi.com') != -1){
         res.render('index', {title: '蜗牛派｜一站式物联网解决方案 & 物联网培训 & 物联网和机器人的发烧友聚乐部', h1: '蜗牛派', h2: '一站式物联网解决方案'});
+    }else {
+        res.render('nickvpn', {title: 'nick vpn'});
     }
 })
 ;
