@@ -26,3 +26,7 @@ input {
 label {
     width: 80px;
 }
+.footer{
+    text-align: center;
+    margin: 20px auto;
+}

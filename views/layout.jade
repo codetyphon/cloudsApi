@@ -10,11 +10,21 @@ html
     div.weui_tab
         div.weui_tab_bd
         div.weui_navbar
-            a.weui_navbar_item.weui_bar_item_on
+            a.weui_navbar_item.weui_bar_item_on(href='/')
                 p.weui_tabbar_label='主页'
-            a.weui_navbar_item
+            a.weui_navbar_item(href='/download')
                 p.weui_tabbar_label='下载'
-            a.weui_navbar_item
-                p.weui_tabbar_label='关于'
+            a.weui_navbar_item(href='/about')
+                p.weui_tabbar_label='捐赠'
     div.box
       block content
+    div.footer
+        p
+            span
+                Copyright &copy;
+            span=' '
+            span
+                script
+                    |document.write(new Date().getFullYear());
+            span=' www.snailPi.com'
+

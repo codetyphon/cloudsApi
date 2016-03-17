@@ -1,0 +1,6 @@
+按住 FLASH 按键（这里不松开）
+?按下 RST 按键并松开
+?松开 FLASH 按键
+
+
+https://github.com/icamgo/Noduino

@@ -64,5 +64,11 @@ router.get('/ctrl', function (req, res, next) {
 
 /* 历史遗留问题结束 */
 
+router.get('/download', function (req, res, next) {
+    res.render('download', {title: '控制led和lamp'});
+});
 
+router.get('/about', function (req, res, next) {
+    res.render('about', {title: 'about'});
+});
 module.exports = router;

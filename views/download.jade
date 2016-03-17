@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  div.weui_msg
+    h2='一、在烧录之前要初始化开发版'
+    p
+      a(href='/download/nodemcu/CH341SER.EXE')='开发版驱动程序'
+    p='1)按住 FLASH 键'
+    p='2)按下 RST 键'
+    p='3)松开 FLASH 键'
+    p
+      a(href='/download/nodemcu_flasher32bit.exe')='固件烧录器'
+    p
+      a(href='/download/nodemcu/nodemcu_float_0.9.6-dev_20150704.bin')='固件 20150704(最新版)'
+    p
+      a(target='_bank' href='http://weidian.com/i/1772079572?wfr=c')='如果没有开发版，可以在此购买。(已经烧录好最新固件)'
+    p='最新的固件针脚图'
+    p
+      img(src='/images/pinmap.png')
+    p='D0对应的是GPIO 16'
+    p='D1对应的是GPIO 5'
+    p='程序中的针脚号1 对应的就是开发版的 D1 也就是 GPIO 5'
+    h2='开发工具'
+    p
+      a(href='/download/nodemcu/ide.zip')='IDE'
+      span='（win8 以下版本需要安装'
+      a(href='/download/nodemcu/Microsoft.NET.exe')='.net 4.0'
+      span='）'
+
+
