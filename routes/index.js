@@ -10,11 +10,11 @@ router.get('/', function (req, res, next) {
     } else if (req.host.indexOf('gongls.com') != -1) {
         res.render('gongls/index', {title: 'gongls'});
     } else if (req.host.indexOf('lovelatter.cc') != -1) {
-        res.render('lovelatter.cc/index', {title: '情书'});
+        res.render('lovelatter.cc/index', {title: '情书',domain:'www.lovelatter.cc'});
     } else if (req.host.indexOf('bielu.net') != -1) {
-        res.render('bielu/index', {title: '别撸'});
+        res.render('bielu/index', {title: '别撸',domain:'www.bielu.net'});
     } else if (req.host.indexOf('zhiwuchaxun.com') != -1) {
-        res.render('zhiwuchaxun/index', {title: '植物查询'});
+        res.render('zhiwuchaxun/index', {title: '植物查询',domain:'www.zhiwuchaxun.com'});
     } else if (req.host.indexOf('crabpi.com') != -1) {
         res.render('crabpi/index', {title: '螃蟹派 | 云主机'});
     } else if (req.host.indexOf('snailpi.com') != -1) {
