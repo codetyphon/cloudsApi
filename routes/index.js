@@ -71,7 +71,7 @@ router.get('/lamp/off', function (req, res, next) {
 });
 
 router.get('/ctrl', function (req, res, next) {
-    res.render('ctrl', {title: '控制led和lamp'});
+    res.render('snailpi/ctrl', {title: '控制led和lamp'});
 });
 
 /* 历史遗留问题结束 */
