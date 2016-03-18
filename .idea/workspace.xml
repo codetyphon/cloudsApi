@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0da9352f-6e4e-437e-af5b-e0ca6e24b317" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/nickvpn/index.jade" afterPath="$PROJECT_DIR$/views/nickvpn/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/nickvpn/layout.jade" afterPath="$PROJECT_DIR$/views/nickvpn/layout.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/poweredbycrabpi.jade" afterPath="$PROJECT_DIR$/views/poweredbycrabpi.jade" />
     </list>
     <ignored path="cloudsApi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,21 +33,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/nickvpn/index.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42194092">
+            <state vertical-scroll-proportion="-12.0">
               <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/nickvpn/layout.jade">
+      <file leaf-file-name="poweredbycrabpi.jade" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/poweredbycrabpi.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.4">
-              <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+            <state vertical-scroll-proportion="0.5063291">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -116,13 +114,13 @@
         <option value="$PROJECT_DIR$/views/gongls/index.jade" />
         <option value="$PROJECT_DIR$/views/lovelatter.cc/index.jade" />
         <option value="$PROJECT_DIR$/views/zhiwuchaxun/index.jade" />
-        <option value="$PROJECT_DIR$/views/poweredbycrabpi.jade" />
         <option value="$PROJECT_DIR$/views/crabpi/index.jade" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/public/nickvpn/app.js" />
         <option value="$PROJECT_DIR$/views/nickvpn/layout.jade" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/views/nickvpn/index.jade" />
+        <option value="$PROJECT_DIR$/views/poweredbycrabpi.jade" />
       </list>
     </option>
   </component>
@@ -749,14 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/poweredbycrabpi.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33755276">
-          <caret line="16" column="20" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/crabpi/index.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.51895046">
@@ -791,16 +781,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/nickvpn/layout.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.4">
-          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.23206751">
+          <caret line="11" column="25" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/nickvpn/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42194092">
+        <state vertical-scroll-proportion="-12.0">
           <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/poweredbycrabpi.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5063291">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding />
         </state>
       </provider>
