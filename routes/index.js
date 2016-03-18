@@ -11,6 +11,8 @@ router.get('/', function (req, res, next) {
         res.render('gongls/index', {title: 'gongls'});
     } else if (req.host.indexOf('lovelatter.cc') != -1) {
         res.render('lovelatter.cc/index', {title: '情书',domain:'www.lovelatter.cc'});
+    } else if (req.host.indexOf('dobebox.com') != -1) {
+        res.render('dobebox/index', {title: '逗比盒子',domain:'www.dobebox.com'});
     } else if (req.host.indexOf('bielu.net') != -1) {
         res.render('bielu/index', {title: '别撸',domain:'www.bielu.net'});
     } else if (req.host.indexOf('zhiwuchaxun.com') != -1) {
