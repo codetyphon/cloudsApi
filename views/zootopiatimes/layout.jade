@@ -1,0 +1,21 @@
+doctype html
+html
+   head
+      title= title
+      meta(name='viewport',content='initial-scale=1.0,maximum-scale=1,user-scalable=no')
+      link(rel='stylesheet', href='/stylesheets/weui.min.css')
+      link(rel='stylesheet', href='/stylesheets/style.css')
+      script(src='/javascripts/jquery.min.js')
+   body
+      h1=title
+      div.box
+            block content
+      div.footer
+         p
+            span
+               Copyright &copy;
+            span=' '
+            span
+               script
+                  | document.write(new Date().getFullYear());
+            span=' www.zootopiatimes.com'

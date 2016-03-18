@@ -1,0 +1,16 @@
+extends layout
+block content
+   div.weui_cells_title='螃蟹派云主机'
+   div.weui_cells.weui_cells_form
+      div.weui_cell
+         div.weui_cell_hd
+            label='账号'
+         div.weui_cell_bd.weui_cell_primary
+            input.weui_input(name='user',type='text',placeholder='请输入用户名')
+      div.weui_cell
+         div.weui_cell_hd
+            label='密码'
+         div.weui_cell_bd.weui_cell_primary
+            input.weui_input(name='password',type='password',placeholder='请输入密码',value='')
+      div.weui_cell
+         button.weui_btn.weui_btn_primary(type='submit')='登陆螃蟹派'

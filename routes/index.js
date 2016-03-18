@@ -2,19 +2,27 @@ var express = require('express');
 var router = express.Router();
 var db = require('../lib/db.js');
 
+
 /* GET home page. */
 router.get('/', function (req, res, next) {
     if (req.host.indexOf('zootopiatimes.com') != -1) {
-        res.render('zndex', {title: 'zootopia times'});
-    } else if(req.host.indexOf('nickvpn.com') != -1){
-        res.render('nickvpn', {title: 'nick vpn'});
-    }else if(req.host.indexOf('snailpi.com') != -1){
-        res.render('index', {title: '蜗牛派｜一站式物联网解决方案 & 物联网培训 & 物联网和机器人的发烧友聚乐部', h1: '蜗牛派', h2: '一站式物联网解决方案'});
-    }else {
-        res.render('nickvpn', {title: 'nick vpn'});
+        res.render('zootopiatimes/index', {title: '疯狂动物城时报'});
+    } else if (req.host.indexOf('gongls.com') != -1) {
+        res.render('gongls/index', {title: 'gongls'});
+    } else if (req.host.indexOf('lovelatter.cc') != -1) {
+        res.render('lovelatter.cc/index', {title: '情书'});
+    } else if (req.host.indexOf('bielu.net') != -1) {
+        res.render('bielu/index', {title: '别撸'});
+    } else if (req.host.indexOf('zhiwuchaxun.com') != -1) {
+        res.render('zhiwuchaxun/index', {title: '植物查询'});
+    } else if (req.host.indexOf('crabpi.com') != -1) {
+        res.render('crabpi/index', {title: '螃蟹派 | 云主机'});
+    } else if (req.host.indexOf('snailpi.com') != -1) {
+        res.render('snailpi/index', {title: '蜗牛派｜一站式物联网解决方案 & 物联网培训 & 物联网和机器人的发烧友聚乐部', h1: '蜗牛派', h2: '一站式物联网解决方案'});
+    } else {
+        res.render('nickvpn/index', {title: 'nick vpn'});
     }
 })
-;
 
 /* 历史遗留问题 */
 
