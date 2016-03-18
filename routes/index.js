@@ -22,7 +22,7 @@ router.get('/', function (req, res, next) {
     } else if (req.host.indexOf('snailpi.com') != -1) {
         res.render('snailpi/index', {title: '蜗牛派｜一站式物联网解决方案 & 物联网培训 & 物联网和机器人的发烧友聚乐部', h1: '蜗牛派', h2: '一站式物联网解决方案'});
     } else {
-        res.render('nickvpn/index', {title: 'nick vpn'});
+        res.render('nickvpn/index', {title: 'nickVPN 疯狂动物城网络加速器'});
     }
 })
 
