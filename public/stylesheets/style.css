@@ -26,14 +26,64 @@ input {
 label {
     width: 80px;
 }
-.footer{
+
+.footer {
     text-align: center;
     margin: 20px auto;
 }
-.center{
+
+.center {
     text-align: center;
 }
-img{
+
+img {
     max-width: 100%;
     margin: auto;
+}
+
+p {
+    line-height: 1.5em;
+    text-align: justify;
+    margin: 10px auto;
+}
+
+.text_left {
+    text-align: left;
+}
+
+.text_right {
+    text-align: right;
+}
+.text_center {
+    text-align: center;
+}
+.text_justify {
+    text-align: justify;
+}
+/* nick vpn */
+.alert_top {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    padding: 10px;
+}
+
+button.close {
+    padding: 0;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    margin-top: 9px;
+    margin-right: 5px;
+}
+
+.close {
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #000000;
+    text-shadow: 0 1px 0 #ffffff;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
 }

@@ -1,5 +1,9 @@
 extends layout
 block content
+    div.alert_top
+        button.close='×'
+        p='各位同学，我是nick狐，这是我为疯狂动物城提供的vpn服务。请勿非法连接，否则后果自付。'
+        p.text_right='--疯狂动物城vpn有限责任公司 CEO nick狐'
     div.box.center
         h1=title
         p='还在为上不去网而烦恼？'
@@ -13,3 +17,4 @@ block content
         a(href='/download/openvpn/client.dmg')='windows'
         p='  '
         a(href='/download/openvpn/client.dmg')='Mac'
+    script(src='/nickvpn/app.js')
