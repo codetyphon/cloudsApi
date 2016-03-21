@@ -1,0 +1,25 @@
+extends ../poweredbycrabpi
+block content
+    link(rel='stylesheet', href='/bitchwho/index.css')
+    link(rel='stylesheet', href='/bitchwho/style.css')
+    link(rel='stylesheet', href='/bitchwho/singin_singup.css')
+    link(rel='stylesheet', href='/nickvpn/style.css')
+    div#bg
+    div.alert_top
+        button.close='×'
+        p='各位同学，我是nick狐，这是我为疯狂动物城提供的VPN网络加速服务。请各位同学切勿非法连接，否则被牛局长抓住了可要后果自付哟！'
+        p.text_right='--疯狂动物城vpn有限责任公司 CEO nick狐'
+    div.login_box
+        h1=title
+        h2.subtitle=subtitle
+        div.register_form
+            div.group_inputs
+                div.input_wrapper
+                    input(name='fullname',placeholder='用户名').fullname
+                div.input_wrapper
+                    input(type='password',name='passwd',placeholder='密  码').passwd
+            button.sign_button.submit='登陆'+title
+    script(src='/javascripts/jquery.particleground.min.js')
+    script(src='/bitchwho/signin_signup_bg.js')
+    script(src='/bitchwho/signin.js')
+    script(src='/nickvpn/app.js')

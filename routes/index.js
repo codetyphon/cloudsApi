@@ -26,7 +26,12 @@ router.get('/', function (req, res, next) {
             res.render('snailpi/signin', {title: '蜗牛派', subtitle: '一站式物联网解决方案'});
         }
     } else if (req.host.indexOf('nickvpn.com') != -1) {
-        res.render('nickvpn/index', {title: 'nickVPN 疯狂动物城网络加速器'});
+        if (req.session.user) {
+            res.render('nickvpn/index', {title: 'nickVPN 疯狂动物城网络加速器'});
+        } else {
+            res.render('nickvpn/signin', {title: 'nickVPN 疯狂动物城网络加速器'});
+        }
+
     } else if (req.host.indexOf('bitchwho.com') != -1) {
         if (req.session.user) {
             res.render('bitchwho/home', {title: '碧池乎', subtitle: '矫情的不一定都是贱人'});
@@ -39,12 +44,22 @@ router.get('/', function (req, res, next) {
             res.render('bitchwho/home', {title: '碧池乎', subtitle: '矫情的不一定都是贱人'});
         } else {
             res.render('bitchwho/signin', {title: '碧池乎', subtitle: '矫情的不一定都是贱人'});
-        }*/
+        }
+        */
+
         if (req.session.user) {
             res.render('snailpi/home', {title: '蜗牛派', subtitle: '一站式物联网解决方案'});
         } else {
             res.render('snailpi/signin', {title: '蜗牛派', subtitle: '一站式物联网解决方案'});
         }
+        
+        /*
+        if (req.session.user) {
+            res.render('nickvpn/index', {title: 'nickVPN 疯狂动物城网络加速器'});
+        } else {
+            res.render('nickvpn/signin', {title: 'nickVPN 疯狂动物城网络加速器'});
+        }
+        */
     }
 })
 
