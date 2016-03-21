@@ -8,6 +8,6 @@
 #bg{
     z-index: -100;
 }
-.index_box{
+.index_box,.footer{
     z-index: 999;
 }
