@@ -20,7 +20,11 @@ router.get('/', function (req, res, next) {
     } else if (req.host.indexOf('crabpi.com') != -1) {
         res.render('crabpi/index', {title: '螃蟹派 | 云主机'});
     } else if (req.host.indexOf('snailpi.com') != -1) {
-        res.render('snailpi/index', {title: '蜗牛派｜一站式物联网解决方案 & 物联网培训 & 物联网和机器人的发烧友聚乐部', h1: '蜗牛派', h2: '一站式物联网解决方案'});
+        if (req.session.user) {
+            res.render('snailpi/home', {title: '蜗牛派', subtitle: '一站式物联网解决方案'});
+        } else {
+            res.render('snailpi/signin', {title: '蜗牛派', subtitle: '一站式物联网解决方案'});
+        }
     } else if (req.host.indexOf('nickvpn.com') != -1) {
         res.render('nickvpn/index', {title: 'nickVPN 疯狂动物城网络加速器'});
     } else if (req.host.indexOf('bitchwho.com') != -1) {
