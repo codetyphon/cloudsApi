@@ -30,6 +30,19 @@ router.get('/', function (req, res, next) {
     }
 })
 
+router.get('/signup', function (req, res, next) {
+    if (req.host.indexOf('bitchwho.com') != -1) {
+        res.render('bitchwho/signup', {title: '注册碧池乎'});
+    } else if (req.host.indexOf('crabpi.com') != -1) {
+        res.render('crabpi/signup', {title: '螃蟹派 | 云主机 ｜ 注册'});
+    } else if (req.host.indexOf('snailpi.com') != -1) {
+        res.render('snailpi/signup', {title: '蜗牛派｜注册', h1: '蜗牛派', h2: '一站式物联网解决方案'});
+    } else {
+        //res.render('404', {title: '你找的页面被狗吃了'});
+        res.render('bitchwho/signup', {title: '注册碧池乎',subtitle:'矫情的不一定都是贱人'});
+    }
+});
+
 /* 历史遗留问题 */
 
 router.get('/led', function (req, res, next) {
