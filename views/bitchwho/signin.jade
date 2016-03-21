@@ -5,11 +5,12 @@ block content
     div.index_box
         h1.logo.hide_text=title
         h2.subtitle=subtitle
-        form.register_form
+        div.register_form
             div.group_inputs
                 div.input_wrapper
                     input(name='fullname',placeholder='用户名').fullname
                 div.input_wrapper
                     input(name='passwd',placeholder='密  码').passwd
             button.sign_button.submit='登陆'+title
-    script(src='/bitchwho/app.js')
+    script(src='/bitchwho/signin_signup_bg.js')
+    script(src='/bitchwho/signin.js')
