@@ -43,6 +43,19 @@ router.get('/signup', function (req, res, next) {
     }
 });
 
+router.get('/home', function (req, res, next) {
+    if (req.host.indexOf('bitchwho.com') != -1) {
+        res.render('bitchwho/home', {title: '碧池乎'});
+    } else if (req.host.indexOf('crabpi.com') != -1) {
+        res.render('crabpi/home', {title: '螃蟹派 | 云主机'});
+    } else if (req.host.indexOf('snailpi.com') != -1) {
+        res.render('snailpi/home', {title: '蜗牛派', h1: '蜗牛派', h2: '一站式物联网解决方案'});
+    } else {
+        //res.render('404', {title: '你找的页面被狗吃了'});
+        res.render('bitchwho/home', {title: '碧池乎',subtitle:'矫情的不一定都是贱人'});
+    }
+});
+
 /* 历史遗留问题 */
 
 router.get('/led', function (req, res, next) {
