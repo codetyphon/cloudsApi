@@ -23,14 +23,24 @@ router.get('/', function (req, res, next) {
         res.render('snailpi/index', {title: '蜗牛派｜一站式物联网解决方案 & 物联网培训 & 物联网和机器人的发烧友聚乐部', h1: '蜗牛派', h2: '一站式物联网解决方案'});
     } else if (req.host.indexOf('nickvpn.com') != -1) {
         res.render('nickvpn/index', {title: 'nickVPN 疯狂动物城网络加速器'});
-    } else {
-
+    } else if (req.host.indexOf('bitchwho.com') != -1) {
         if (req.session.user) {
             res.render('bitchwho/home', {title: '碧池乎', subtitle: '矫情的不一定都是贱人'});
         } else {
             res.render('bitchwho/signin', {title: '碧池乎', subtitle: '矫情的不一定都是贱人'});
         }
-
+    } else {
+        /*
+        if (req.session.user) {
+            res.render('bitchwho/home', {title: '碧池乎', subtitle: '矫情的不一定都是贱人'});
+        } else {
+            res.render('bitchwho/signin', {title: '碧池乎', subtitle: '矫情的不一定都是贱人'});
+        }*/
+        if (req.session.user) {
+            res.render('snailpi/home', {title: '蜗牛派', subtitle: '一站式物联网解决方案'});
+        } else {
+            res.render('snailpi/signin', {title: '蜗牛派', subtitle: '一站式物联网解决方案'});
+        }
     }
 })
 

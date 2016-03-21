@@ -6,6 +6,14 @@
     left: 0;
     right: 0;
 }
+#bg{
+    z-index: -100;
+}
+.index_box{
+    z-index: 999;
+}
+
+
 h1.logo {
     background: url('/bitchwho/logo.png');
     width: 193px;

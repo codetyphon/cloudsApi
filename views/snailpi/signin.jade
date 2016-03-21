@@ -1,10 +1,12 @@
 extends layout
 block content
     link(rel='stylesheet', href='/bitchwho/index.css')
+    link(rel='stylesheet', href='/bitchwho/style.css')
     link(rel='stylesheet', href='/bitchwho/singin_singup.css')
+    link(rel='stylesheet', href='/snailpi/style.css')
     div#bg
     div.index_box
-        h1.logo.hide_text=title
+        h1=title
         h2.subtitle=subtitle
         div.register_form
             div.group_inputs
@@ -13,5 +15,6 @@ block content
                 div.input_wrapper
                     input(type='password',name='passwd',placeholder='密  码').passwd
             button.sign_button.submit='登陆'+title
+    script(src='/javascripts/jquery.particleground.min.js')
     script(src='/bitchwho/signin_signup_bg.js')
     script(src='/bitchwho/signin.js')
