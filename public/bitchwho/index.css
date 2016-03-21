@@ -1,0 +1,28 @@
+/* index */
+.index_box,#bg{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+h1.logo {
+    background: url('/bitchwho/logo.png');
+    width: 193px;
+    height: 61px;
+    margin: 20px auto;
+}
+h2.subtitle{
+    margin: 30px auto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1;
+    text-align: center;
+    color: #555;
+}
+.footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

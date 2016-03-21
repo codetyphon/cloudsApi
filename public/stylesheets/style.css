@@ -5,6 +5,17 @@
 
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',Arial,sans-serif;
+    background: #f7fafc;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.hide_text {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
 }
 
 a {
