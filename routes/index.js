@@ -107,8 +107,17 @@ router.post('/api/signin', function (req, res, next) {
 
 });
 
-router.post('/api/test', function (req, res, next) {
-    res.json(req.session.user);
+router.get('/api/test', function (req, res, next) {
+    //console.log(req.headers);
+
+    res.json({
+        ip:req.headers.host,
+        ua:req.headers['user-agent'],
+        url:req.url,
+        method:req.method,
+        time:Date()
+    });
+
 });
 
 router.post('/api/reg/:fullname', function (req, res, next) {
