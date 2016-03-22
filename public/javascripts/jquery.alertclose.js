@@ -1,0 +1,20 @@
+/*
+https://github.com/codetyphon/alertClose
+*/
+;(function($){
+    $.fn.extend({
+        alertClose:function(time){
+            if(time!=undefined){
+                $(this).bind('click',function(){
+                    $(this).parent().hide();
+                    $('body,html').animate({opacity:0},time);
+                });
+            }else{
+                $(this).bind('click',function(){
+                    $(this).parent().hide();
+                });
+            }
+
+        }
+    })
+})(jQuery);

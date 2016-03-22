@@ -52,7 +52,7 @@ router.get('/', function (req, res, next) {
         } else {
             res.render('snailpi/signin', {title: '蜗牛派', subtitle: '一站式物联网解决方案'});
         }
-        
+
         /*
         if (req.session.user) {
             res.render('nickvpn/index', {title: 'nickVPN 疯狂动物城网络加速器'});
