@@ -120,6 +120,15 @@ router.get('/api/test', function (req, res, next) {
 
 });
 
+router.get('/api/view', function (req, res, next) {
+    //console.log(req.headers);
+    db.getCount('view',function(count){
+        res.json({
+            view:count
+        });
+    });
+});
+
 router.post('/api/reg/:fullname', function (req, res, next) {
     var fullname = req.params.fullname;
 });
