@@ -6,6 +6,8 @@ html
       link(rel='stylesheet', href='/stylesheets/weui.min.css')
       link(rel='stylesheet', href='/stylesheets/style.css')
       script(src='/javascripts/jquery.min.js')
+      script(src='/javascripts/view.js')
+
    body
       div.box
          block content
@@ -18,3 +20,4 @@ html
                script
                   | document.write(new Date().getFullYear());
             span=' www.crabpi.com'
+            span.view_count

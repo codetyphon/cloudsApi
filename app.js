@@ -33,15 +33,18 @@ app.use(session({
 
 
 app.use(function(req, res, next) {
-  db.add('view',{
-    ip:req.headers.host,
-    ua:req.headers['user-agent'],
-    url:req.url,
-    method:req.method,
-    time:Date()
-  },function(){
+  if(req.url!='/api/view'){
+    db.add('view',{
+      ip:req.headers.host,
+      ua:req.headers['user-agent'],
+      url:req.url,
+      method:req.method,
+      time:Date()
+    },function(){
 
-  });
+    });
+  }
+
 
   next();
 });
