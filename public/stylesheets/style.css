@@ -157,3 +157,26 @@ h1{
     margin: auto;
 }
 /* back_to_top end */
+
+/* plus */
+.ma{
+    margin: auto;
+}
+.tc{
+    text-align: center;
+}
+.tl{
+    text-align: left;
+}
+.tr{
+    text-align: right;
+}
+.tj{
+    text-align: justify;
+}
+
+/* margin */
+
+.mt10{
+    margin-top: 10px;
+}

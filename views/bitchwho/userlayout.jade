@@ -1,0 +1,9 @@
+extends layout
+block content
+    div.navigation
+        a=title
+        a.current='发现'
+        a='观点'
+        a='提问'
+        a(href='/logout')='滚蛋'
+    block content

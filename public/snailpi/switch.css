@@ -1,0 +1,37 @@
+.pan{
+    background: #fffbc2;
+    margin: 0 auto;
+    padding: 10px;
+}
+.border{
+    background: #ffda44;
+    padding: 10px;
+}
+
+/* 分隔符 */
+.separator {
+    height: 10px;
+    background: #ffda44;
+    position: relative;
+}
+
+.arrow_1 {
+    width: 0;
+    height: 0;
+    border-top: solid 10px #fffbc2;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    margin: auto;
+}
+
+.arrow_2 {
+    width: 0;
+    height: 0;
+    border-top: solid 10px #ffda44;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+}

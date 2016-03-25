@@ -48,3 +48,12 @@ input{
     margin: 15px auto;
     padding: 8px 0 8px 0;
 }
+
+/* about */
+.about h2{
+    color: #3AAA7D;
+    ont-family: sans-serif;
+}
+.about{
+    color: #7C7474;
+}

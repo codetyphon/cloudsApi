@@ -84,54 +84,9 @@ router.get('/logout', function (req, res, next) {
     })
 });
 
-router.post('/api/signin', function (req, res, next) {
-    //res.session.user='wb';
-    var fullname = req.body.fullname;
-    var passwd = req.body.passwd;
-    //res.json({fullname:fullname,passwd:passwd});
-
-    db.get_one('users', {fullname: fullname}, function (result) {
-        if (result) {
-            if (result.passwd === passwd) {
-                req.session.user = 'wb';
-                res.json({login: true});
-            } else {
-                res.json({login: false});
-            }
-        } else {
-            res.json({login: false});
-        }
-
-    });
 
 
-});
 
-router.get('/api/test', function (req, res, next) {
-    //console.log(req.headers);
-
-    res.json({
-        ip:req.headers.host,
-        ua:req.headers['user-agent'],
-        url:req.url,
-        method:req.method,
-        time:Date()
-    });
-
-});
-
-router.get('/api/view', function (req, res, next) {
-    //console.log(req.headers);
-    db.getCount('view',function(count){
-        res.json({
-            view:count
-        });
-    });
-});
-
-router.post('/api/reg/:fullname', function (req, res, next) {
-    var fullname = req.params.fullname;
-});
 
 router.get('/signin', function (req, res, next) {
     if (req.host.indexOf('bitchwho.com') != -1) {
@@ -146,18 +101,7 @@ router.get('/signin', function (req, res, next) {
     }
 });
 
-router.get('/home', function (req, res, next) {
-    if (req.host.indexOf('bitchwho.com') != -1) {
-        res.render('bitchwho/home', {title: '碧池乎'});
-    } else if (req.host.indexOf('crabpi.com') != -1) {
-        res.render('crabpi/home', {title: '螃蟹派 | 云主机'});
-    } else if (req.host.indexOf('snailpi.com') != -1) {
-        res.render('snailpi/home', {title: '蜗牛派', h1: '蜗牛派', h2: '一站式物联网解决方案'});
-    } else {
-        //res.render('404', {title: '你找的页面被狗吃了'});
-        res.render('bitchwho/home', {title: '碧池乎', subtitle: '矫情的不一定都是贱人'});
-    }
-});
+
 
 /* 历史遗留问题 */
 
@@ -211,11 +155,61 @@ router.get('/ctrl', function (req, res, next) {
 
 /* 历史遗留问题结束 */
 
+/* snailPi */
+/*
+router.get('/devices', function (req, res, next) {
+    //
+});
+router.get('/devices/create', function (req, res, next) {
+    //
+});
+router.get('/devices/:id', function (req, res, next) {
+    //
+});
+*/
+router.get('/switch', function (req, res, next) {
+    //
+    if (req.session.user) {
+        res.render('snailpi/switch', {title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
+    } else {
+        res.render('snailpi/signin', {title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
+    }
+});
+router.get('/switch/create', function (req, res, next) {
+    //
+    res.render('snailpi/switch_create', {title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
+});
+
+
+
+router.get('/switch/:id', function (req, res, next) {
+    //
+});
+router.get('/switch/:id/', function (req, res, next) {
+    //
+});
+
+router.get('/invite', function (req, res, next) {
+    //邀请
+
+});
+
 router.get('/download', function (req, res, next) {
-    res.render('download', {title: '控制led和lamp'});
+    res.render('snailpi/download', {title: '下载'});
 });
 
 router.get('/about', function (req, res, next) {
-    res.render('about', {title: 'about'});
+    /*
+    if (req.host.indexOf('bitchwho.com') != -1) {
+        res.render('bitchwho/about', {title: 'about'});
+    }else{
+        res.render('about', {title: 'about'});
+    }*/
+    res.render('bitchwho/about', {title: 'about'});
+
+});
+
+router.get('/upload', function (req, res, next) {
+    res.render('upload', {title: 'upload'});
 });
 module.exports = router;
