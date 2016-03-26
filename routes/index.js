@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var db = require('../lib/db.js');
+var ObjectId = require('mongodb').ObjectID;
 
 
 /* GET home page. */
@@ -170,7 +171,9 @@ router.get('/devices/:id', function (req, res, next) {
 router.get('/switch', function (req, res, next) {
     //
     if (req.session.user) {
-        res.render('snailpi/switch', {title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
+        db.get('switch',{onwer:req.session.user.fullname},function(switch_arr){
+            res.render('snailpi/switch', {switch_arr:switch_arr,title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
+        });
     } else {
         res.render('snailpi/signin', {title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
     }
@@ -183,6 +186,11 @@ router.get('/switch/create', function (req, res, next) {
 
 
 router.get('/switch/:id', function (req, res, next) {
+    var id=req.params.id;
+    db.get_one('switch',{'_id':ObjectId(id)},function(switch_obj){
+        res.render('snailpi/switch_info', {switch_obj:switch_obj,title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
+    });
+
     //
 });
 router.get('/switch/:id/', function (req, res, next) {

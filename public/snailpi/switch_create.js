@@ -11,6 +11,13 @@ $(document).ready(function(){
             $btn.attr('disabled',true);
             $.post('/api/switch/create',{name:name},function(d){
                 console.log(d);
+                if(!d.err){
+                    console.log('创建成功');
+                    location.href='/switch/'+ d.switch_id;
+                }else{
+                    $('.msg').text(d.msg);
+                    $btn.text('创建');
+                }
                 $btn.removeAttr('disabled');
             });
         }

@@ -16,8 +16,11 @@ block content
         div.pan
             a(href='/switch/create')='创建一个云开关'
         div.pan
-            p='LED'
-            p='LAMP'
+            -each switch_one in switch_arr
+                li
+                    h2=switch_one.name
+                    a(href='/switch/#{switch_one._id}')='info'
+
 
     div#back_to_top
     script(src='/javascripts/jquery.imgloader.js')

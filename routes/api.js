@@ -59,9 +59,9 @@ router.post('/switch/create', function (req, res, next) {
 
         //检查 该用户 创建的 开关 数量
         db.getCount('switch',{onwer:req.session.user.fullname},function(count){
-            if(count<=2){
+            if(count<=3){
                 var time=Date();
-                db.add('switch',{onwer:req.session.user.fullname,name:name,time:time},function(id){
+                db.add('switch',{onwer:req.session.user.fullname,name:name,time:time,status:'off'},function(id){
                     res.json({err:false,msg:'添加成功',switch_id:id});
                 });
             }else{
