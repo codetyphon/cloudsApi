@@ -193,9 +193,7 @@ router.get('/switch/:id', function (req, res, next) {
 
     //
 });
-router.get('/switch/:id/', function (req, res, next) {
-    //
-});
+
 
 router.get('/invite', function (req, res, next) {
     //邀请
@@ -207,13 +205,13 @@ router.get('/download', function (req, res, next) {
 });
 
 router.get('/about', function (req, res, next) {
-    /*
+
     if (req.host.indexOf('bitchwho.com') != -1) {
         res.render('bitchwho/about', {title: 'about'});
     }else{
         res.render('about', {title: 'about'});
-    }*/
-    res.render('bitchwho/about', {title: 'about'});
+    }
+    //res.render('bitchwho/about', {title: 'about'});
 
 });
 

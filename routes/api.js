@@ -4,6 +4,7 @@ var fs = require('fs');
 var path = require('path');
 var router = express.Router();
 var db = require('../lib/db.js');
+var ObjectId = require('mongodb').ObjectID;
 
 /* GET users listing. */
 router.get('/test', function (req, res, next) {
@@ -70,6 +71,51 @@ router.post('/switch/create', function (req, res, next) {
         });
     }else{
         res.json({err:true,msg:'your are not login'});
+    }
+});
+
+router.get('/switch/:id', function (req, res, next) {
+    var id=req.params.id;
+    db.get_one('switch',{'_id':ObjectId(id)},function(switch_obj){
+        res.json({status:switch_obj.status});
+    });
+
+    //
+});
+
+/* switch on/off */
+router.get('/switch/:id/on', function (req, res, next) {
+    var id=req.params.id;
+    if (req.session.user) {
+        db.get_one('switch',{'_id':ObjectId(id)},function(switch_one){
+            if(req.session.user.fullname===switch_one.onwer){
+                db.update('switch',{'_id':ObjectId(id)},{status:'on'},function(result){
+                    result.err=false;
+                    res.json(result);
+                });
+            }else{
+                res.json({err:true,msg:'u are not onwer'});
+            }
+        });
+    }else{
+        res.json({err:true,msg:'u are not login'});
+    }
+});
+router.get('/switch/:id/off', function (req, res, next) {
+    var id=req.params.id;
+    if (req.session.user) {
+        db.get_one('switch',{'_id':ObjectId(id)},function(switch_one){
+            if(req.session.user.fullname===switch_one.onwer){
+                db.update('switch',{'_id':ObjectId(id)},{status:'off'},function(result){
+                    result.err=false;
+                    res.json(result);
+                });
+            }else{
+                res.json({err:true,msg:'u are not onwer'});
+            }
+        });
+    }else{
+        res.json({err:true,msg:'u are not login'});
     }
 });
 
