@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0da9352f-6e4e-437e-af5b-e0ca6e24b317" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/bitchwho/invite.jade" afterPath="$PROJECT_DIR$/views/bitchwho/invite.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/bitchwho/user.jade" afterPath="$PROJECT_DIR$/views/bitchwho/user.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/snailpi/invite.jade" afterPath="$PROJECT_DIR$/views/snailpi/invite.jade" />
     </list>
     <ignored path="cloudsApi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,8 +37,8 @@
       <file leaf-file-name="invite.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/snailpi/invite.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.2">
-              <caret line="7" column="42" selection-start-line="6" selection-start-column="8" selection-end-line="7" selection-end-column="42" />
+            <state vertical-scroll-proportion="-5.4">
+              <caret line="9" column="21" selection-start-line="8" selection-start-column="8" selection-end-line="9" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -104,20 +104,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="invite.jade" pinned="false" current-in-tab="false">
+      <file leaf-file-name="invite.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/bitchwho/invite.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+            <state vertical-scroll-proportion="0.21097046">
+              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="user.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="user.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/bitchwho/user.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
               <folding />
             </state>
@@ -188,11 +188,11 @@
         <option value="$PROJECT_DIR$/views/bitchwho/home.jade" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/routes/user.js" />
-        <option value="$PROJECT_DIR$/views/snailpi/invite.jade" />
         <option value="$PROJECT_DIR$/views/snailpi/signup.jade" />
         <option value="$PROJECT_DIR$/views/bitchwho/signup.jade" />
-        <option value="$PROJECT_DIR$/views/bitchwho/invite.jade" />
         <option value="$PROJECT_DIR$/views/bitchwho/user.jade" />
+        <option value="$PROJECT_DIR$/views/snailpi/invite.jade" />
+        <option value="$PROJECT_DIR$/views/bitchwho/invite.jade" />
       </list>
     </option>
   </component>
@@ -885,14 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/snailpi/invite.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.2">
-          <caret line="7" column="42" selection-start-line="6" selection-start-column="8" selection-end-line="7" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/user.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -917,7 +909,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/bitchwho/invite.jade">
+    <entry file="file://$PROJECT_DIR$/views/bitchwho/user.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
@@ -925,10 +917,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/bitchwho/user.jade">
+    <entry file="file://$PROJECT_DIR$/views/snailpi/invite.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="12" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+        <state vertical-scroll-proportion="-5.4">
+          <caret line="9" column="21" selection-start-line="8" selection-start-column="8" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/bitchwho/invite.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21097046">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
           <folding />
         </state>
       </provider>
