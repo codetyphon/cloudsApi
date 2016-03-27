@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0da9352f-6e4e-437e-af5b-e0ca6e24b317" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/snailpi/switch_info.jade" afterPath="$PROJECT_DIR$/views/snailpi/switch_info.jade" />
     </list>
     <ignored path="cloudsApi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,8 +86,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7350544">
-              <caret line="116" column="30" selection-start-line="116" selection-start-column="30" selection-end-line="116" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.51086956">
+              <caret line="80" column="45" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -909,8 +908,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7350544">
-          <caret line="116" column="30" selection-start-line="116" selection-start-column="30" selection-end-line="116" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.51086956">
+          <caret line="80" column="45" selection-start-line="80" selection-start-column="45" selection-end-line="80" selection-end-column="45" />
           <folding />
         </state>
       </provider>

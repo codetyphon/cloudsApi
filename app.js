@@ -68,6 +68,8 @@ app.use(function (req, res, next) {
             break;
         case 'www.zootopiatimes.com':
             site.dir='zootopiatimes';
+            site.logged_index='index';
+            site.unlogged_index='index';
             site.title='疯狂动物城时报';
             site.subtitle='疯狂动物城官方报纸';
             break;
