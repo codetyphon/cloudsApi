@@ -4,7 +4,7 @@ block content
     div.navigation
         a=title
         a.current='发现'
-        a(href='/invite')='邀请'
+        a(href='/user/invite')='邀请'
         a='提问'
         - if (user)
             a(href='/user')=user.fullname

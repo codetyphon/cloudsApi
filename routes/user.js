@@ -48,7 +48,7 @@ router.get('/invite', function (req, res, next) {
                 if(count===0){
                     db.update('users',{fullname:fullname},{invite:invite},function(){
                         req.session.user.invite=invite;
-                        res.render(site.dir + '/invite', {invite_users:users,invite:invite,user: req.session.user, title: site.title, subtitle: site.subtitle});
+                        res.render(site.dir + '/invite', {host:req.host,invite_users:users,invite:invite,user: req.session.user, title: site.title, subtitle: site.subtitle});
                     });
                 }else{
                     get_a_invite();
@@ -60,7 +60,7 @@ router.get('/invite', function (req, res, next) {
                 get_a_invite(users);
             }else{
                 var invite=req.session.user.invite;
-                res.render(site.dir + '/invite', {invite_users:users,invite:invite,user: req.session.user, title: site.title, subtitle: site.subtitle});
+                res.render(site.dir + '/invite', {host:req.host,invite_users:users,invite:invite,user: req.session.user, title: site.title, subtitle: site.subtitle});
             }
         });
 

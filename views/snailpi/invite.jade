@@ -4,7 +4,8 @@ block content
     div.box
         p='你的邀请码是：'
             span=invite
-        p=''
+        p='你可以把这个链接发送给好友：'
+        p='http://'+host+'/invite/'+invite
 
         p='你邀请了：'
         -each u in invite_users

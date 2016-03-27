@@ -137,9 +137,15 @@ router.get('/switch/:id', function (req, res, next) {
     //
 });
 
-router.get('/invite', function (req, res, next) {
+router.get('/invite/:invite', function (req, res, next) {
     //邀请
-
+    var invite=req.params.invite;
+    var site=req.site;
+    if (req.session.user) {
+        res.render(site.dir+'/'+site.logged_index, {user: req.session.user, title: site.title, subtitle: site.subtitle});
+    } else {
+        res.render(site.dir+'/signup', {invite:invite,title: '注册'+site.title, subtitle: site.subtitle});
+    }
 });
 
 
