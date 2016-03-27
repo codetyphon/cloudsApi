@@ -21,7 +21,11 @@ router.get('/invite', function (req, res, next) {
     //
 
 
+
     if (req.session.user) {
+        var fullname=req.session.user.fullname;
+
+
 
         function randomString(len) {
             len = len || 32;
@@ -35,29 +39,31 @@ router.get('/invite', function (req, res, next) {
             return pwd;
         }
 
-        var fullname=req.session.user.fullname;
 
-        function get_a_invite(){
+
+        function get_a_invite(users){
             var invite = randomString(5);
 
             db.getCount('users', {invite: invite}, function (count) {
                 if(count===0){
                     db.update('users',{fullname:fullname},{invite:invite},function(){
                         req.session.user.invite=invite;
-                        res.render(site.dir + '/invite', {invite:invite,user: req.session.user, title: site.title, subtitle: site.subtitle});
+                        res.render(site.dir + '/invite', {invite_users:users,invite:invite,user: req.session.user, title: site.title, subtitle: site.subtitle});
                     });
                 }else{
                     get_a_invite();
                 }
             });
         }
+        db.get('users',{master:fullname},function(users){
+            if(req.session.user.invite===undefined){
+                get_a_invite(users);
+            }else{
+                var invite=req.session.user.invite;
+                res.render(site.dir + '/invite', {invite_users:users,invite:invite,user: req.session.user, title: site.title, subtitle: site.subtitle});
+            }
+        });
 
-        if(req.session.user.invite===undefined){
-            get_a_invite();
-        }else{
-            var invite=req.session.user.invite;
-            res.render(site.dir + '/invite', {invite:invite,user: req.session.user, title: site.title, subtitle: site.subtitle});
-        }
     } else {
         res.render(site.dir + '/' + site.unlogged_index, {title: site.title, subtitle: site.subtitle});
     }

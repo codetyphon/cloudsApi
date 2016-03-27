@@ -1,15 +1,10 @@
 extends layout
 block content
     link(rel='stylesheet', href='/bitchwho/home.css')
-    div.box
-        p='你的邀请码是：'
-            span=invite
-        p=''
 
-        p='你邀请了：'
-        -each u in invite_users
-            li
-                div.name=u.fullname
+
+    div.box
+        a(href='/user/invite')='邀请好友'
     div#back_to_top
     script(src='/javascripts/jquery.imgloader.js')
     script(src='/javascripts/jquery.backtotop.js')

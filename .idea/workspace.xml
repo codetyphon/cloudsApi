@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0da9352f-6e4e-437e-af5b-e0ca6e24b317" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/snailpi/signup.jade" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/bitchwho/signup.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/bitchwho/invite.jade" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/bitchwho/user.jade" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/api.js" afterPath="$PROJECT_DIR$/routes/api.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/db.js" afterPath="$PROJECT_DIR$/lib/db.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/bitchwho/signin.jade" afterPath="$PROJECT_DIR$/views/bitchwho/signin.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/snailpi/signin.jade" afterPath="$PROJECT_DIR$/views/snailpi/signin.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bitchwho/signin.js" afterPath="$PROJECT_DIR$/public/bitchwho/signin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/bitchwho/signup.jade" afterPath="$PROJECT_DIR$/views/bitchwho/signup.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/bitchwho/style.css" afterPath="$PROJECT_DIR$/public/bitchwho/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/bitchwho/home.jade" afterPath="$PROJECT_DIR$/views/bitchwho/home.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/snailpi/invite.jade" afterPath="$PROJECT_DIR$/views/snailpi/invite.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/user.js" afterPath="$PROJECT_DIR$/routes/user.js" />
     </list>
     <ignored path="cloudsApi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,37 +32,57 @@
         <entry file="file://$PROJECT_DIR$/routes/user.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="45" column="54" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="54" />
+              <caret line="50" column="77" selection-start-line="50" selection-start-column="77" selection-end-line="50" selection-end-column="77" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signup.jade" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/snailpi/signup.jade">
+      <file leaf-file-name="invite.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/snailpi/invite.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.8">
-              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+            <state vertical-scroll-proportion="-3.0">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/bitchwho/style.css">
+      <file leaf-file-name="layout.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/bitchwho/layout.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
+            <state vertical-scroll-proportion="-10.8">
+              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="signup.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/bitchwho/signup.js">
+      <file leaf-file-name="home.jade" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/bitchwho/home.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4089674">
-              <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.21097046">
+              <caret line="10" column="33" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/snailpi/layout.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.04">
+              <caret line="26" column="27" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="switch.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/snailpi/switch.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-10.8">
+              <caret line="18" column="18" selection-start-line="17" selection-start-column="12" selection-end-line="18" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -87,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/routes/api.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="74" column="50" selection-start-line="74" selection-start-column="50" selection-end-line="74" selection-end-column="50" />
+              <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -135,7 +150,6 @@
         <option value="$PROJECT_DIR$/public/bitchwho/home.css" />
         <option value="$PROJECT_DIR$/public/javascripts/jquery.imgloader.js" />
         <option value="$PROJECT_DIR$/public/javascripts/jquery.backtotop.js" />
-        <option value="$PROJECT_DIR$/views/bitchwho/home.jade" />
         <option value="$PROJECT_DIR$/public/snailpi/style.css" />
         <option value="$PROJECT_DIR$/public/bitchwho/index.css" />
         <option value="$PROJECT_DIR$/public/bitchwho/singin_singup.css" />
@@ -170,8 +184,6 @@
         <option value="$PROJECT_DIR$/views/snailpi/switch_info.jade" />
         <option value="$PROJECT_DIR$/views/snailpi/user.jade" />
         <option value="$PROJECT_DIR$/routes/index.js" />
-        <option value="$PROJECT_DIR$/views/snailpi/invite.jade" />
-        <option value="$PROJECT_DIR$/routes/user.js" />
         <option value="$PROJECT_DIR$/public/bitchwho/style.css" />
         <option value="$PROJECT_DIR$/views/snailpi/signin.jade" />
         <option value="$PROJECT_DIR$/views/snailpi/signup.jade" />
@@ -180,8 +192,11 @@
         <option value="$PROJECT_DIR$/views/bitchwho/signup.jade" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/lib/db.js" />
-        <option value="$PROJECT_DIR$/routes/api.js" />
         <option value="$PROJECT_DIR$/public/bitchwho/signup.js" />
+        <option value="$PROJECT_DIR$/routes/api.js" />
+        <option value="$PROJECT_DIR$/routes/user.js" />
+        <option value="$PROJECT_DIR$/views/snailpi/invite.jade" />
+        <option value="$PROJECT_DIR$/views/bitchwho/home.jade" />
       </list>
     </option>
   </component>
@@ -414,11 +429,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/views/bitchwho" />
       <recent name="$PROJECT_DIR$/public/bitchwho" />
       <recent name="$PROJECT_DIR$/views/snailpi" />
       <recent name="$PROJECT_DIR$/routes" />
       <recent name="$PROJECT_DIR$/public/snailpi" />
-      <recent name="$PROJECT_DIR$/public/javascripts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/views/snailpi" />
@@ -618,14 +633,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/bitchwho/home.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="14" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/bitchwho/about.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33755276">
@@ -730,14 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/bitchwho/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37974682">
-          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/about.jade">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3586498">
@@ -758,22 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16304348">
           <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/snailpi/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.0">
-          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/snailpi/switch.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -818,34 +801,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/snailpi/invite.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/bitchwho/singin_singup.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/bitchwho/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="45" column="54" selection-start-line="45" selection-start-column="48" selection-end-line="45" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -882,14 +841,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/snailpi/signup.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.8">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -906,18 +857,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="74" column="50" selection-start-line="74" selection-start-column="50" selection-end-line="74" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/bitchwho/signup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4089674">
           <caret line="43" column="22" selection-start-line="43" selection-start-column="22" selection-end-line="43" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/bitchwho/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.26630434">
+          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/snailpi/signup.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48523206">
+          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/snailpi/switch.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.8">
+          <caret line="18" column="18" selection-start-line="17" selection-start-column="12" selection-end-line="18" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="50" column="77" selection-start-line="50" selection-start-column="77" selection-end-line="50" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/bitchwho/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.8">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/snailpi/invite.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/snailpi/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.04">
+          <caret line="26" column="27" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/bitchwho/home.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21097046">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="33" />
           <folding />
         </state>
       </provider>

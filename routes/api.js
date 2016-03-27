@@ -60,38 +60,29 @@ router.post('/signup', function (req, res, next) {
     var invite = req.body.invite;
     //res.json({fullname:fullname,passwd:passwd});
 
-    db.get_one('users',{invite:invite},function(user){
-        if(user===undefined){
-            res.json({err: true,msg:'邀请码不存在！'});
-        }else{
-            //
-            var master=user.fullname;
-            var time=Date();
-            ip=req.client_ip;
-            db.add('users',{fullname: fullname,passwd:passwd,master:master,register_time:time,register_ip:ip},function(user){
-                if(user.err){
-                    res.json({err: true,msg:'注册失败！'});
+    db.getCount('users',{fullname: fullname},function(count){
+        if(count===0){
+            db.get_one('users',{invite:invite},function(user){
+                if(user===undefined){
+                    res.json({err: true,msg:'邀请码不存在！'});
                 }else{
-                    res.json({err: false,msg:'注册成功！'});
+                    //
+                    var master=user.fullname;
+                    var time=Date();
+                    ip=req.client_ip;
+                    db.add('users',{fullname: fullname,passwd:passwd,master:master,register_time:time,register_ip:ip},function(user){
+                        if(user.err){
+                            res.json({err: true,msg:'注册失败！'});
+                        }else{
+                            res.json({err: false,msg:'注册成功！'});
+                        }
+                    });
                 }
             });
+        }else{
+            res.json({err: true,msg:'用户名已经存在！'});
         }
     });
-    /*
-    db.get_one('users', {fullname: fullname}, function (result) {
-        if (result) {
-            if (result.passwd === passwd) {
-                req.session.user = result;
-                res.json({login: true});
-            } else {
-                res.json({login: false});
-            }
-        } else {
-            res.json({login: false});
-        }
-
-    });
-    */
 });
 
 router.post('/switch/create', function (req, res, next) {
