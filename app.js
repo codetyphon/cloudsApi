@@ -114,7 +114,7 @@ app.use(function (req, res, next) {
             site.subtitle='云主机';
             break;
         case 'www.bitchwho.com':
-            site.dir='crabpi';
+            site.dir='bitchwho';
             site.logged_index='home';
             site.unlogged_index='signin';
             site.title='碧池乎';
