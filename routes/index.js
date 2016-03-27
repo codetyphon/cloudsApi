@@ -150,7 +150,7 @@ router.get('/download', function (req, res, next) {
 router.get('/about', function (req, res, next) {
 
     var site=req.site;
-    res.render(req.site.dir+'/about', {title: '关于'+req.site.title, subtitle: req.site.subtitle});
+    res.render(req.site.dir+'/about', {user: req.session.user, title: '关于'+req.site.title, subtitle: req.site.subtitle});
 
 });
 
