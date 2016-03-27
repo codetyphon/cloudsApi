@@ -4,6 +4,7 @@ block content
     link(rel='stylesheet', href='/bitchwho/style.css')
     link(rel='stylesheet', href='/bitchwho/singin_singup.css')
     link(rel='stylesheet', href='/snailpi/style.css')
+
     div#bg
     div.index_box
         h1=title
@@ -14,10 +15,10 @@ block content
                 div.input_wrapper
                     input(name='fullname',placeholder='用户名').fullname
                 div.input_wrapper
-                    input(type='password',name='passwd',placeholder='密  码').passwd
-            button._button.signin_button.submit='登陆'+title
-            a(href='/signup')
-                button._button.goto_signup_button='注册' + title
+                    input(name='passwd',placeholder='密  码').passwd
+                div.input_wrapper
+                    input(name='invite',placeholder='邀请码').invite
+            button._button.sign_button.submit=title
     script(src='/javascripts/jquery.particleground.min.js')
     script(src='/bitchwho/signin_signup_bg.js')
-    script(src='/bitchwho/signin.js')
+    script(src='/bitchwho/signup.js')

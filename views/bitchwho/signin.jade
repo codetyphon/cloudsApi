@@ -7,11 +7,15 @@ block content
         h1.logo.hide_text=title
         h2.subtitle=subtitle
         div.register_form
+            div.msg
             div.group_inputs
                 div.input_wrapper
                     input(name='fullname',placeholder='用户名').fullname
                 div.input_wrapper
                     input(type='password',name='passwd',placeholder='密  码').passwd
-            button.sign_button.submit='登陆'+title
+            button._button.signin_button.submit='登陆' + title
+            a(href='/signup')
+                button._button.goto_signup_button='注册' + title
+    script(src='/javascripts/jquery.particleground.min.js')
     script(src='/bitchwho/signin_signup_bg.js')
     script(src='/bitchwho/signin.js')

@@ -43,6 +43,8 @@ app.use(function (req, res, next) {
             req.connection.socket.remoteAddress;
     }
 
+    req.client_ip=getClientIp(req);
+
     if (req.url != '/api/view') {
         db.add('view', {
             host: req.headers.host,
