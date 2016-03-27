@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var api = require('./routes/api');
+var user = require('./routes/user');
 var users = require('./routes/users');
 var json = require('./routes/json');
 
@@ -54,12 +55,86 @@ app.use(function (req, res, next) {
 
         });
     }
+    //console.log(req.host);
+    var site={};
+
+    switch (req.host){
+        case 'www.nickvpn.com':
+            site.dir='nickvpn';
+            site.logged_index='home';
+            site.unlogged_index='signin';
+            site.title='nick狐vpn加速器';
+            site.subtitle='nick狐vpn加速器';
+            break;
+        case 'www.zootopiatimes.com':
+            site.dir='zootopiatimes';
+            site.title='疯狂动物城时报';
+            site.subtitle='疯狂动物城官方报纸';
+            break;
+        case 'www.gongls.com':
+            site.dir='gongls';
+            site.logged_index='index';
+            site.unlogged_index='index';
+            site.title='gongls';
+            site.subtitle='H5,game,and more';
+            break;
+        case 'www.lovelatter.cc':
+            site.dir='crabpi';
+            site.logged_index='index';
+            site.unlogged_index='index';
+            site.title='lovelatter';
+            site.subtitle='lovelatter';
+            break;
+        case 'www.dobebox.com':
+            site.dir='crabpi';
+            site.logged_index='index';
+            site.unlogged_index='index';
+            site.title='dobebox';
+            site.subtitle='dobebox';
+            break;
+        case 'www.bielu.net':
+            site.dir='crabpi';
+            site.logged_index='index';
+            site.unlogged_index='index';
+            site.title='别撸';
+            site.subtitle='撸多了，对身体不好！';
+            break;
+        case 'www.zhiwuchaxun.com':
+            site.dir='crabpi';
+            site.logged_index='index';
+            site.unlogged_index='index';
+            site.title='植物查询';
+            site.subtitle='几乎能找到一些植物';
+            break;
+        case 'www.crabpi.com':
+            site.dir='crabpi';
+            site.logged_index='home';
+            site.unlogged_index='signin';
+            site.title='螃蟹派';
+            site.subtitle='云主机';
+            break;
+        case 'www.bitchwho.com':
+            site.dir='crabpi';
+            site.logged_index='home';
+            site.unlogged_index='signin';
+            site.title='碧池乎';
+            site.subtitle='矫情的不一定都是贱人';
+            break;
+        default :
+            site.dir='snailpi';
+            site.logged_index='home';
+            site.unlogged_index='signin';
+            site.title='蜗牛派';
+            site.subtitle='一站式物联网解决方案';
+    }
+    req.site=site;
     next();
 });
 
 
 app.use('/', index);
 app.use('/api', api);
+app.use('/user', user);
 app.use('/users', users);
 app.use('/json', json);
 

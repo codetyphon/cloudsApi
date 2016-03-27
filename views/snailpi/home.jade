@@ -1,20 +1,9 @@
 extends layout
 block content
     link(rel='stylesheet', href='/bitchwho/home.css')
-    div.navigation
-        a=title
-        a(href='/switch').current='云开关'
-        a='讨论'
-        a='提问'
-        a(href='/logout')='退出'
 
     div.box
-        img.imgloader(low_src='http://7vzsbb.com1.z0.glb.clouddn.com/860cd73265406be979b065a985c9a6ec.jpg?imageMogr/v2/thumbnail/50x50',
-        middle_src='http://7vzsbb.com1.z0.glb.clouddn.com/860cd73265406be979b065a985c9a6ec.jpg?imageMogr/v2/thumbnail/100x100',
-        high_src='http://7vzsbb.com1.z0.glb.clouddn.com/860cd73265406be979b065a985c9a6ec.jpg?imageMogr/v2/thumbnail/600x600')
-        img.imgloader(low_src='http://7vzsbb.com1.z0.glb.clouddn.com/860cd73265406be979b065a985c9a6ec.jpg?imageMogr/v2/thumbnail/50x50',
-        middle_src='http://7vzsbb.com1.z0.glb.clouddn.com/860cd73265406be979b065a985c9a6ec.jpg?imageMogr/v2/thumbnail/100x100',
-        high_src='http://7vzsbb.com1.z0.glb.clouddn.com/860cd73265406be979b065a985c9a6ec.jpg?imageMogr/v2/thumbnail/600x600')
+
     div#back_to_top
     script(src='/javascripts/jquery.imgloader.js')
     script(src='/javascripts/jquery.backtotop.js')

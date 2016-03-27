@@ -6,102 +6,38 @@ var ObjectId = require('mongodb').ObjectID;
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    if (req.host.indexOf('zootopiatimes.com') != -1) {
-        res.render('zootopiatimes/index', {title: '疯狂动物城时报'});
-    } else if (req.host.indexOf('gongls.com') != -1) {
-        res.render('gongls/index', {title: 'gongls'});
-    } else if (req.host.indexOf('lovelatter.cc') != -1) {
-        res.render('lovelatter.cc/index', {title: '情书', domain: 'www.lovelatter.cc'});
-    } else if (req.host.indexOf('dobebox.com') != -1) {
-        res.render('dobebox/index', {title: '逗比盒子', domain: 'www.dobebox.com'});
-    } else if (req.host.indexOf('bielu.net') != -1) {
-        res.render('bielu/index', {title: '别撸', domain: 'www.bielu.net'});
-    } else if (req.host.indexOf('zhiwuchaxun.com') != -1) {
-        res.render('zhiwuchaxun/index', {title: '植物查询', domain: 'www.zhiwuchaxun.com'});
-    } else if (req.host.indexOf('crabpi.com') != -1) {
-        res.render('crabpi/index', {title: '螃蟹派 | 云主机'});
-    } else if (req.host.indexOf('snailpi.com') != -1) {
-        if (req.session.user) {
-            res.render('snailpi/home', {title: '蜗牛派', subtitle: '一站式物联网解决方案'});
-        } else {
-            res.render('snailpi/signin', {title: '蜗牛派', subtitle: '一站式物联网解决方案'});
-        }
-    } else if (req.host.indexOf('nickvpn.com') != -1) {
-        if (req.session.user) {
-            res.render('nickvpn/index', {title: 'nickVPN 疯狂动物城网络加速器'});
-        } else {
-            res.render('nickvpn/signin', {title: 'nickVPN 疯狂动物城网络加速器'});
-        }
-
-    } else if (req.host.indexOf('bitchwho.com') != -1) {
-        if (req.session.user) {
-            res.render('bitchwho/home', {title: '碧池乎', subtitle: '矫情的不一定都是贱人'});
-        } else {
-            res.render('bitchwho/signin', {title: '碧池乎', subtitle: '矫情的不一定都是贱人'});
-        }
+    var site=req.site;
+    if (req.session.user) {
+        res.render(site.dir+'/'+site.logged_index, {user: req.session.user, title: site.title, subtitle: site.subtitle});
     } else {
-        /*
-        if (req.session.user) {
-            res.render('bitchwho/home', {title: '碧池乎', subtitle: '矫情的不一定都是贱人'});
-        } else {
-            res.render('bitchwho/signin', {title: '碧池乎', subtitle: '矫情的不一定都是贱人'});
-        }
-        */
-
-        if (req.session.user) {
-            res.render('snailpi/home', {title: '蜗牛派', subtitle: '一站式物联网解决方案'});
-        } else {
-            res.render('snailpi/signin', {title: '蜗牛派', subtitle: '一站式物联网解决方案'});
-        }
-
-        /*
-        if (req.session.user) {
-            res.render('nickvpn/index', {title: 'nickVPN 疯狂动物城网络加速器'});
-        } else {
-            res.render('nickvpn/signin', {title: 'nickVPN 疯狂动物城网络加速器'});
-        }
-        */
+        res.render(site.dir+'/'+site.unlogged_index, {title: site.title, subtitle: site.subtitle});
     }
 })
 
 router.get('/signup', function (req, res, next) {
-
-    if (req.host.indexOf('bitchwho.com') != -1) {
-        res.render('bitchwho/signup', {title: '注册碧池乎'});
-    } else if (req.host.indexOf('crabpi.com') != -1) {
-        res.render('crabpi/signup', {title: '螃蟹派 | 云主机 ｜ 注册'});
-    } else if (req.host.indexOf('snailpi.com') != -1) {
-        res.render('snailpi/signup', {title: '蜗牛派｜注册', h1: '蜗牛派', h2: '一站式物联网解决方案'});
+    var site=req.site;
+    if (req.session.user) {
+        res.render(site.dir+'/'+site.logged_index, {user: req.session.user, title: site.title, subtitle: site.subtitle});
     } else {
-        //res.render('404', {title: '你找的页面被狗吃了'});
-        res.render('bitchwho/signup', {title: '注册碧池乎', subtitle: '矫情的不一定都是贱人'});
+        res.render(site.dir+'/signup', {title: '注册'+site.title, subtitle: site.subtitle});
     }
 });
 
 router.get('/logout', function (req, res, next) {
-    //req.session.destroy();
     req.session.destroy(function (err) {
         res.redirect('/');
     })
 });
 
 
-
-
-
 router.get('/signin', function (req, res, next) {
-    if (req.host.indexOf('bitchwho.com') != -1) {
-        res.render('bitchwho/signin', {title: '注册碧池乎'});
-    } else if (req.host.indexOf('crabpi.com') != -1) {
-        res.render('crabpi/signin', {title: '螃蟹派 | 云主机 ｜ 登陆'});
-    } else if (req.host.indexOf('snailpi.com') != -1) {
-        res.render('snailpi/signin', {title: '蜗牛派｜登陆', h1: '蜗牛派', h2: '一站式物联网解决方案'});
+    var site=req.site;
+    if (req.session.user) {
+        res.render(site.dir+'/'+site.logged_index, {user: req.session.user, title: site.title, subtitle: site.subtitle});
     } else {
-        //res.render('404', {title: '你找的页面被狗吃了'});
-        res.render('bitchwho/signin', {title: '登陆碧池乎', subtitle: '矫情的不一定都是贱人'});
+        res.render(site.dir+'/signin', {title: '登陆'+site.title, subtitle: site.subtitle});
     }
 });
-
 
 
 /* 历史遗留问题 */
@@ -158,21 +94,26 @@ router.get('/ctrl', function (req, res, next) {
 
 /* snailPi */
 /*
-router.get('/devices', function (req, res, next) {
-    //
-});
-router.get('/devices/create', function (req, res, next) {
-    //
-});
-router.get('/devices/:id', function (req, res, next) {
-    //
-});
-*/
+ router.get('/devices', function (req, res, next) {
+ //
+ });
+ router.get('/devices/create', function (req, res, next) {
+ //
+ });
+ router.get('/devices/:id', function (req, res, next) {
+ //
+ });
+ */
 router.get('/switch', function (req, res, next) {
     //
     if (req.session.user) {
-        db.get('switch',{onwer:req.session.user.fullname},function(switch_arr){
-            res.render('snailpi/switch', {switch_arr:switch_arr,title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
+        db.get('switch', {onwer: req.session.user.fullname}, function (switch_arr) {
+            res.render('snailpi/switch', {
+                user: req.session.user,
+                switch_arr: switch_arr,
+                title: '蜗牛派 | 云开关',
+                subtitle: '一站式物联网解决方案'
+            });
         });
     } else {
         res.render('snailpi/signin', {title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
@@ -180,38 +121,36 @@ router.get('/switch', function (req, res, next) {
 });
 router.get('/switch/create', function (req, res, next) {
     //
-    res.render('snailpi/switch_create', {title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
+    if (req.session.user) {
+        res.render('snailpi/switch_create', {user: req.session.user, title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
+    }
 });
 
 
-
 router.get('/switch/:id', function (req, res, next) {
-    var id=req.params.id;
-    db.get_one('switch',{'_id':ObjectId(id)},function(switch_obj){
-        res.render('snailpi/switch_info', {switch_obj:switch_obj,title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
+    var id = req.params.id;
+
+    db.get_one('switch', {'_id': ObjectId(id)}, function (switch_obj) {
+        res.render('snailpi/switch_info', {switch_obj: switch_obj, title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
     });
 
     //
 });
-
 
 router.get('/invite', function (req, res, next) {
     //邀请
 
 });
 
+
 router.get('/download', function (req, res, next) {
-    res.render('snailpi/download', {title: '下载'});
+    res.render('snailpi/download', {user: req.session.user, title: '下载'});
 });
 
 router.get('/about', function (req, res, next) {
 
-    if (req.host.indexOf('bitchwho.com') != -1) {
-        res.render('bitchwho/about', {title: 'about'});
-    }else{
-        res.render('about', {title: 'about'});
-    }
-    //res.render('bitchwho/about', {title: 'about'});
+    var site=req.site;
+    res.render(req.site.dir+'/about', {title: '关于'+req.site.title, subtitle: req.site.subtitle});
 
 });
 

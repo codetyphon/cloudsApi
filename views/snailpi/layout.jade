@@ -18,10 +18,18 @@ html
             div.weui_navbar
                 a.weui_navbar_item.weui_bar_item_on(href='/')
                     p.weui_tabbar_label='主页'
+                a.weui_navbar_item.weui_bar_item_on(href='/switch')
+                    p.weui_tabbar_label='云开关'
                 a.weui_navbar_item(href='/download')
                     p.weui_tabbar_label='下载'
                 a.weui_navbar_item(href='/about')
                     p.weui_tabbar_label='捐赠'
+                - if (user)
+                    a.weui_navbar_item(href='/user')
+                        p.weui_tabbar_label=user.fullname
+                    a.weui_navbar_item(href='/logout')
+                        p.weui_tabbar_label='退出'
+
         div.box
             block content
         div.footer
