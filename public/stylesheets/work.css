@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    display: block;
+}
+.fullpage{
+    max-width: 414px;
+    width: 100%;
+    margin: auto;
+}
+.full{
+    width: 100%;
+}
+.pf{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.max_full{
+    max-width: 100%;
+}
+.btn{
+    cursor: pointer;
+}
+.pr{
+    position: relative;
+}
+.pf{
+    position: fixed;
+}
+.pa{
+    position: absolute;
+}
+
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.table{
+    display: table;
+}
+.cell{
+    display: table-cell;
+}
+.cell_top{
+    display: table-cell;
+    vertical-align: top;
+}
+.cell_middle{
+    display: table-cell;
+    vertical-align: middle;
+}
+.cell_bottom{
+    display: table-cell;
+    vertical-align: bottom;
+}
+.tac{
+    text-align: center;
+}
+.tal{
+    text-align: left;
+}
+.tar{
+    text-align: right;
+}
+.dotted_line{
+    border-bottom: dotted #403f31 1px;
+    width: 100%;
+    height: 0px;
+}

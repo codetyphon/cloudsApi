@@ -10,6 +10,7 @@ var api = require('./routes/api');
 var user = require('./routes/user');
 var users = require('./routes/users');
 var json = require('./routes/json');
+var work = require('./routes/work');//gongls:work
 
 var session = require('express-session');
 var MongoStore = require('connect-mongo')(session);
@@ -141,6 +142,7 @@ app.use('/api', api);
 app.use('/user', user);
 app.use('/users', users);
 app.use('/json', json);
+app.use('/work', work);
 
 
 

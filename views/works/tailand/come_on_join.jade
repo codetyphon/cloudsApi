@@ -1,0 +1,25 @@
+extends ../layout
+block content
+    link(rel='stylesheet', href='/works/tailand/css/public.css')
+    div.fullpage.come_on_join.pr
+        img.full(src='/works/tailand/img/join/1.png')
+        div.full.pr
+            img.full(src='/works/tailand/img/join/2.png')
+            input.invite.invite_code.pa(name='invite',placeholder='4位加油码')
+        img.full(src='/works/tailand/img/join/3.png')
+        div.full.pr
+            img.full(src='/works/tailand/img/join/4.png')
+            div.pa.check_invite.btn
+        img.full(src='/works/tailand/img/join/5.png')
+        div.full.pr
+            img.full(src='/works/tailand/img/join/6.png')
+            div.pa.download_app.btn
+        img.full(src='/works/tailand/img/join/7.png')
+        div.alert_pan.pa.pf.hide
+            div.alert_err.pr
+                img.full(src='/works/tailand/img/join/alert_err.png')
+                div.pa.close_btn.btn.close_alert_pan
+                div.pa.msg.check_invite_msg='msg here'
+                div.pa.yes_btn.close_alert_pan.just_close.btn
+                div.pa.yes_btn.close_and_goto_join.close_and_goto.btn.hide
+    script(src='/works/tailand/app.js')
