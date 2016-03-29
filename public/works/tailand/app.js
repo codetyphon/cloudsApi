@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+    $('.imgloader').imgloader();
     /* page index */
     $('.btn_go_to_des').bind('click',function(){
         //in app

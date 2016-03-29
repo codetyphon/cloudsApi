@@ -1,5 +1,5 @@
 /*
-https://github.com/codetyphon/jquery.backtotop
+https://github.com/codetyphon/jquery.imgloader
 */
 ;(function($){
     $.fn.extend({

@@ -10,6 +10,7 @@ var api = require('./routes/api');
 var user = require('./routes/user');
 var users = require('./routes/users');
 var json = require('./routes/json');
+var wxapi = require('./routes/wxapi');
 var work = require('./routes/work');//gongls:work
 
 var session = require('express-session');
@@ -113,8 +114,8 @@ app.use(function (req, res, next) {
             break;
         case 'www.crabpi.com':
             site.dir='crabpi';
-            site.logged_index='home';
-            site.unlogged_index='signin';
+            site.logged_index='index';
+            site.unlogged_index='index';
             site.title='螃蟹派';
             site.subtitle='云主机';
             break;
@@ -131,6 +132,13 @@ app.use(function (req, res, next) {
             site.unlogged_index='signin';
             site.title='蜗牛派';
             site.subtitle='一站式物联网解决方案';
+            /*
+            site.dir='gongls';
+            site.logged_index='index';
+            site.unlogged_index='index';
+            site.title='gongls';
+            site.subtitle='html5 game and more';
+            */
     }
     req.site=site;
     next();
@@ -143,6 +151,7 @@ app.use('/user', user);
 app.use('/users', users);
 app.use('/json', json);
 app.use('/work', work);
+app.use('/wxapi', wxapi);
 
 
 

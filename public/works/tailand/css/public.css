@@ -160,6 +160,14 @@
     right: 8%;
     text-align: center;
 }
+.come_on_des .text_area3{
+    top: 45%;
+    left: 5%;
+    right: 5%;
+    font-size: 14px;
+    line-height: 1.4em;
+    text-align: justify;
+}
 .come_on_des .up_me_info_text_area {
     top: 85.5%;
     left: 0;
