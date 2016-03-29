@@ -1,0 +1,24 @@
+extends ../layout
+block content
+    link(rel='stylesheet', href='/test/zootopia/style.css')
+    div.progress
+        div.progress_bar
+    div.page.welcome
+        h2=title
+        img(src='http://7vzsbb.com1.z0.glb.clouddn.com/7d82d8d1f89d6aeccccd2c6293892a23.png?imageMogr/v2/thumbnail/750x332')
+        img.restart.start(src='http://7vzsbb.com1.z0.glb.clouddn.com/447f4e65b912ab624f565a0f062b05e6.png?imageMogr/v2/thumbnail/504x106')
+    div.page.test
+        div.items
+        div.test_progress
+    div.page.msg(style='display:none')
+        div.out_html
+            div.h2border
+                h2#role.role=''
+                div.h2_up
+                div.h2_down
+            div.pan
+                img#role_face.role_face
+                p#description.description=''
+                img.hothuati_logo(src='http://7vzsbb.com1.z0.glb.clouddn.com/6ebf976d80d7a25df3c2405447268216.png?imageMogr/v2/thumbnail/500x58')
+                button.restart='重新测试'
+    script(src='/test/zootopia/app.js')

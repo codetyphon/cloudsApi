@@ -11,6 +11,7 @@ var user = require('./routes/user');
 var users = require('./routes/users');
 var json = require('./routes/json');
 var wxapi = require('./routes/wxapi');
+var test = require('./routes/test');
 var work = require('./routes/work');//gongls:work
 
 var session = require('express-session');
@@ -152,6 +153,7 @@ app.use('/users', users);
 app.use('/json', json);
 app.use('/work', work);
 app.use('/wxapi', wxapi);
+app.use('/test', test);
 
 
 

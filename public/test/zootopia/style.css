@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 100%;
+}
+
+.progress{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 100%;
+    z-index: 99;
+}
+.progress_bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    width: 0%;
+    background: #A6E22E;
+}
+
+/* 欢迎页 */
+.welcome{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url("http://7vzsbb.com1.z0.glb.clouddn.com/df10ac5385adbe751ea2281bf825bbb7.png?imageMogr/v2/thumbnail/75x120");
+    background-size: cover;
+}
+.welcome h2{
+    display: none;
+}
+img.start {
+    width: 80%;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+/* 测试过程页 */
+.test{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: url("http://7vzsbb.com1.z0.glb.clouddn.com/7412f0b9fe2641b78da927e62a7db2a7.png?imageMogr/v2/thumbnail/750x1334");
+    background-size: cover;
+    background-position: 0 bottom;
+    display: none;
+}
+.items{
+    position: relative;
+}
+.item{
+    width: 90%;
+    margin: auto;
+}
+.test_progress {
+    color: #9b9b9b;
+    font-size: 20px;
+}
+.page_item_pic{
+    margin: auto;
+    width: 100%;
+    float: left;
+    margin-top: 45px;
+}
+h2{
+    background: #ffde00;
+    margin: auto;
+    width: 80%;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 20px;
+    z-index: 99;
+    font-size: 16px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.button_group {
+    display: table;
+    margin: auto;
+    background-color: #c8c7c7;
+    width: 100%;
+    margin: 0 auto;
+}
+button{
+    width: 200px;
+    margin: 20px auto;
+}
+button.select {
+    display: table-cell;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border: none;
+    border-radius: 50%;
+    border:solid 2px #fff;
+    background-repeat: no-repeat;
+    background-size: 30px 30px;
+    background-position: center center;
+}
+
+/* 输出结果页 */
+.msg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    /*background: url("http://7vzsbb.com1.z0.glb.clouddn.com/cfbb52ab61c8293c41cedad85bb7e24c.png?imageMogr/v2/thumbnail/750x1205");*/
+    background: url("http://7vzsbb.com1.z0.glb.clouddn.com/7412f0b9fe2641b78da927e62a7db2a7.png?imageMogr/v2/thumbnail/750x1334");
+    background-size: cover;
+    background-position: 0 bottom;
+    display: none;
+}
+.out_html{
+    width: 90%;
+    margin: auto;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+
+
+}
+.pan{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    top: 35px;
+    background: #fff;
+    -webkit-box-shadow: 0 0 20px 1px rgba(0,0,0,0.2);
+}
+.description {
+    width: 90%;
+    margin: 20px auto;
+    text-align: justify;
+}
+h2.role{
+    /*background: url("/static/test/zootopia/role_bg.png");*/
+    width: 90%;
+    margin: 0 auto;
+    font-size: 25px;
+}
+
+button.restart{
+    background: #505050;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+/*  */
+h2.role{
+    background: none;
+}
+.h2border {
+    width: 90%;
+    height: 50px;
+    position: relative;
+    z-index: 999;
+    margin: auto;
+}
+.h2_up {
+    /* margin: 0; */
+    /* padding: 0; */
+    margin: auto;
+    background: transparent;
+    width: 90%;
+    height: 0px;
+    /* position: absolute; */
+    top: 0;
+    /* left: 0; */
+    /* right: 0; */
+    border-left: solid transparent 15px;
+    border-top: solid #ffde00 25px;
+    border-right: solid transparent 15px;
+}
+.h2_down {
+    /* margin: 0; */
+    /* padding: 0; */
+    margin: auto;
+    background: transparent;
+    width: 90%;
+    height: 0px;
+    /* position: absolute; */
+    top: 0;
+    /* left: 0; */
+    /* right: 0; */
+    border-left: solid transparent 15px;
+    border-bottom: solid #ffde00 25px;
+    border-right: solid transparent 15px;
+}
+img.hothuati_logo {
+    position: absolute;
+    bottom: 55px;
+    left: 0;
+    right: 0;
+}
+
+@media screen and (max-height: 736px){
+    img.hothuati_logo {
+        position: absolute;
+        bottom: 90px;
+        left: 0;
+        right: 0;
+    }
+}
+@media screen and (max-height: 627px){
+    img.hothuati_logo {
+        position: absolute;
+        bottom: 80px;
+        left: 0;
+        right: 0;
+    }
+}
