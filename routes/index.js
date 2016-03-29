@@ -163,4 +163,9 @@ router.get('/about', function (req, res, next) {
 router.get('/upload', function (req, res, next) {
     res.render('upload', {title: 'upload'});
 });
+
+router.get('/about_author', function (req, res, next) {
+    res.render('author', {title: '蜗牛派'});
+});
+
 module.exports = router;

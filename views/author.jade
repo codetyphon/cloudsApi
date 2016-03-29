@@ -1,0 +1,44 @@
+extends h5
+
+block content
+      link(rel='stylesheet', href='/works/author.css')
+      div.navigation
+        a=title
+        a.current='简历'
+
+      h2='宫文博'
+      div.table.full
+        div.left.cell_middle.tal='年龄'
+        div.right.cell_middle.tar='1985'
+
+      h2='简历'
+      div.table.full
+        div.left.cell_middle.tal='时间'
+        div.middle.cell_middle.tal='公司'
+        div.right.cell_middle.tar='职务'
+      div.table.full
+        div.left.cell_middle.tal='2008-2009'
+        div.middle.cell_middle.tal='化育国际'
+        div.right.cell_middle.tar='PHP开发'
+      div.table.full
+        div.left.cell_middle.tal='2010-2013'
+        div.middle.cell_middle.tal='中国村社发展促进会'
+        div.right.cell_middle.tar='web前端工程师'
+      div.table.full
+        div.left.cell_middle.tal='2014-今'
+        div.middle.cell_middle.tal='新京报新媒体'
+        div.right.cell_middle.tar='H5工程师'
+
+      div.table.full='技能'
+        p='1）H5（canvas、css3）'
+        p='2）nodejs （express+mongodb）'
+        p='3) git'
+
+      h3='作品'
+        a.table.full(href='http://www.snailpi.com')='蜗牛派云开关'
+        a.table.full(href='http://www.github.com/codetyphon')='github'
+
+      h3='演示'
+      p='物联网模块用的 nodemcu'
+      p='云端采用 express+mongodb 实现'
+      video#tenvideo_video_player_0(autoplay,controls,src="http://111.202.98.145/vhot2.qqvideo.tc.qq.com/y1303yidmtx.m701.mp4?vkey=785192DF981B9564550D11150A5A9E2A25544A937302360D4B86515B8AE4102E08940DAD42B18923EFB2C5553077E9AA9367CF8010CF31F81FB28EED12FA2A5CF364CBE25CD1160DC7C926FDA83B2E8237B1C7E48B6AF00A&amp;br=29&amp;platform=2&amp;fmt=auto&amp;level=0&amp;sdtfrom=v3010")

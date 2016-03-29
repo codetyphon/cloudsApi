@@ -5,7 +5,7 @@ https://github.com/codetyphon/backtotop
     $.fn.extend({
         backtotop:function(){
             var back_to_top=$('<div>');
-            back_to_top.attr('style','display: block;width: 38px;height: 38px;background-color: #ddd;border-radius: 3px;border: 0;cursor: pointer;position: relative;text-align: center;');
+            back_to_top.attr('style','display: block;width: 38px;height: 38px;background-color: #ddd;border-radius: 3px;border: 0;cursor: pointer;position: relative;text-align: center;margin: auto;');
             var arrow=$('<div>');
             var stick=$('<div>');
             arrow.attr('style','width: 0;height: 0;top: -1px;border: 9px solid transparent;border-bottom-color: #aaa;margin: auto;');
