@@ -119,3 +119,9 @@ video{
     width: 100%;
     max-width: 100%;
 }
+.panel-header {
+    background-color: #c7ccd1;
+}
+.cell_header{
+    border-color: #dedede;
+}

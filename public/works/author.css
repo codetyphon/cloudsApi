@@ -1,3 +1,42 @@
 body{
     text-align: center;
+
+}
+.table{
+    font-size: 14px;
+}
+.cell_middle{
+    border-width: 0 1px 1px 0;
+    border-style: dotted;
+    border-color: #ccc;
+    padding: 5px;
+}
+.left{
+    width: 80px;
+}
+.right{
+    width: 120px;
+}
+h2{
+    padding: 10px;
+    font-size: 18px;
+}
+.panel-header {
+    margin: 10px auto;
+}
+.cell_header{
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    background: #dedede;
+}
+@media screen and (max-width: 320px) {
+    h2,.table{
+        font-size: 12px;
+    }
+    h2{
+        font-size: 14px;
+    }
+    .left{
+        width: 60px;
+    }
 }

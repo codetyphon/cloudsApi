@@ -1,45 +1,57 @@
 extends h5
 
 block content
-      link(rel='stylesheet', href='/works/author.css')
-      div.navigation
+    link(rel='stylesheet', href='/works/author.css')
+    div.navigation
         a=title
         a.current='简历'
-
-      h2='宫文博'
-      div.table.full
-        div.left.cell_middle.tal='年龄'
-        div.right.cell_middle.tar='1985'
-
-      h2='简历'
-      div.table.full
-        div.left.cell_middle.tal='时间'
-        div.middle.cell_middle.tal='公司'
-        div.right.cell_middle.tar='职务'
-      div.table.full
+    div.panel-header
+        h2='简历'
+    div.table.full
+        div.left.cell_middle.tal='姓名'
+        div.cell_middle.tal='宫文博'
+    div.table.full
+        div.left.cell_middle.tal='邮箱'
+        div.cell_middle.tal='codetyphon@sina.com'
+    div.table.full
+        div.left.cell_middle.tal='url'
+        div.cell_middle.tal='www.snailpi.com'
+    div.table.full
+        div.left.cell_middle.tal='github'
+        div.cell_middle.tal='http://www.github.com/codetyphon'
+    div.table.full
+        div.left.cell_middle.tal.cell_header='时间'
+        div.middle.cell_middle.tal.cell_header='公司'
+        div.right.cell_middle.tar.cell_header='职务'
+    div.table.full
         div.left.cell_middle.tal='2008-2009'
         div.middle.cell_middle.tal='化育国际'
         div.right.cell_middle.tar='PHP开发'
-      div.table.full
+    div.table.full
         div.left.cell_middle.tal='2010-2013'
         div.middle.cell_middle.tal='中国村社发展促进会'
         div.right.cell_middle.tar='web前端工程师'
-      div.table.full
-        div.left.cell_middle.tal='2014-今'
+    div.table.full
+        div.left.cell_middle.tal='2014-2015'
+        div.middle.cell_middle.tal='新京报报网'
+        div.right.cell_middle.tar='H5工程师'
+    div.table.full
+        div.left.cell_middle.tal='2015-今'
         div.middle.cell_middle.tal='新京报新媒体'
         div.right.cell_middle.tar='H5工程师'
 
-      div.table.full='技能'
-        p='1）H5（canvas、css3）'
-        p='2）nodejs （express+mongodb）'
-        p='3) git'
+    div.panel-header
+        h2='技能'
+    div.table.full
+        div.middle.cell_middle.tal='1）H5（canvas、css3）'
+    div.table.full
+        div.middle.cell_middle.tal='2）nodejs （express+mongodb）'
+    div.table.full
+        div.middle.cell_middle.tal='3) git'
 
-      h3='作品'
-        a.table.full(href='http://www.snailpi.com')='蜗牛派云开关'
-        a.table.full(href='http://www.github.com/codetyphon')='github'
-
-      h3='演示'
-      p='物联网模块用的 nodemcu'
-      p='云端采用 express+mongodb 实现'
-      iframe.video_iframe(style="z-index: 1; width: 345px !important; height: 258.75px !important; overflow: hidden;",height="258.75",
-width="345",frameborder="0",data-src="https://v.qq.com/iframe/preview.html?vid=y1303yidmtx&amp;width=500&amp;height=375&amp;auto=0" allowfullscreen="",src="http://v.qq.com/iframe/player.html?vid=y1303yidmtx&amp;width=345&amp;height=258.75&amp;auto=0" scrolling="no")
+    div.panel-header
+        h2='演示'
+    p='物联网模块用的 nodemcu'
+    p='云端采用 express+mongodb 实现'
+    iframe.video_iframe(style="z-index: 1; width: 345px !important; height: 258.75px !important; overflow: hidden;",height="258.75",
+    width="345",frameborder="0",data-src="https://v.qq.com/iframe/preview.html?vid=y1303yidmtx&amp;width=500&amp;height=375&amp;auto=0" allowfullscreen="",src="http://v.qq.com/iframe/player.html?vid=y1303yidmtx&amp;width=345&amp;height=258.75&amp;auto=0" scrolling="no")
