@@ -88,3 +88,30 @@ body.IE7 .Switch.Round {
 .Switch.Round.off .Toggle {
     left: 58%;
 }
+
+.switch{
+    width: 50%;
+}
+.name{
+    width: 50%
+}
+.cell_header{
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    background: #dedede;
+}
+.table{
+    font-size: 14px;
+}
+.cell_middle.left{
+    border-width: 0 1px 1px 1px;
+    border-style: dotted;
+    border-color: #ccc;
+    padding: 5px;
+}
+.cell_middle.right{
+    border-width: 0 1px 1px 0px;
+    border-style: dotted;
+    border-color: #ccc;
+    padding: 5px;
+}

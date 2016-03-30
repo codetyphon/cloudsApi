@@ -3,25 +3,20 @@ block content
     link(rel='stylesheet', href='/bitchwho/home.css')
     link(rel='stylesheet', href='/snailpi/switch.css')
     link(rel='stylesheet', href='/stylesheets/switch_button.css')
+    link(rel='stylesheet', href='/stylesheets/work.css')
 
-
-    div.border
-        div.pan
-            h2='云开关'
-        div.separator
-            div.arrow_1
-            div.arrow_2
-
-        div.pan
-            a(href='/switch/create')='创建一个云开关'
-        div.pan
-            -each switch_one in switch_arr
-                li
-                    h2=switch_one.name
-                    a(href='/switch/#{switch_one._id}')='info'
+    div.mt10.panel-header
+        h2.fs18.tac='云开关'
+    div.panel
+        -each switch_one in switch_arr
+            div.table.full
+                div.name.left.cell_middle.tal
+                    a(href='/switch/#{switch_one._id}')=switch_one.name
+                div.switch.right.cell_middle.tac
                     div(switch_id=switch_one._id).Switch.Round
                         div.Toggle
-
+    div.table.full.tac.mt10
+        a.tac.full(href='/switch/create')='创建一个云开关'
     div#back_to_top
     script(src='/javascripts/jquery.imgloader.js')
     script(src='/javascripts/jquery.backtotop.js')
