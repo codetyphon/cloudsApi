@@ -3,6 +3,9 @@
     padding: 0;
     -webkit-tap-highlight-color:transparent;
 }
+body{
+    padding-bottom: 10px;
+}
 img{
     display: block;
 }
@@ -71,6 +74,9 @@ img{
 .tar{
     text-align: right;
 }
+.taj{
+    text-align: justify;
+}
 .dotted_line{
     border-bottom: dotted #403f31 1px;
     width: 100%;
@@ -114,6 +120,7 @@ img{
 .footer{
     text-align: center;
     margin: 20px auto;
+    color: #ccc;
 }
 video{
     width: 100%;
@@ -124,4 +131,29 @@ video{
 }
 .cell_header{
     border-color: #dedede;
+}
+img.max_full{
+    max-width: 100%;
+    margin: 10px auto;
+}
+.fs18{
+    font-size: 18px;
+}
+.fs14{
+    font-size: 14px;
+}
+p{
+    margin: 10px auto;
+    line-height: 1.5em;
+    text-align: justify;
+}
+.mt10{
+    margin-top: 10px;
+}
+.w95{
+    width: 95%;
+    margin: auto;
+}
+h2{
+    line-height: 1.5em;
 }
