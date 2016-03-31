@@ -11,3 +11,6 @@
 .index_box,.footer{
     z-index: 999;
 }
+#back_to_top{
+    display: none;
+}

@@ -13,18 +13,18 @@ html
         script(src='/javascripts/init.js')
         script(src='/javascripts/view.js')
     body
-        div.weui_tab
-            div.weui_tab_bd
-            div.weui_navbar
-                a.weui_navbar_item.weui_bar_item_on(href='/')
-                    p.weui_tabbar_label='主页'
-                a.weui_navbar_item.weui_bar_item_on(href='/switch')
-                    p.weui_tabbar_label='云开关'
-                a.weui_navbar_item(href='/download')
-                    p.weui_tabbar_label='下载'
-                a.weui_navbar_item(href='/about')
-                    p.weui_tabbar_label='捐赠'
-                - if (user)
+        - if (user)
+            div.weui_tab
+                div.weui_tab_bd
+                div.weui_navbar
+                    a.weui_navbar_item.weui_bar_item_on(href='/')
+                        p.weui_tabbar_label='主页'
+                    a.weui_navbar_item.weui_bar_item_on(href='/switch')
+                        p.weui_tabbar_label='云开关'
+                    a.weui_navbar_item(href='/download')
+                        p.weui_tabbar_label='下载'
+                    a.weui_navbar_item(href='/about')
+                        p.weui_tabbar_label='捐赠'
                     a.weui_navbar_item(href='/user')
                         p.weui_tabbar_label=user.fullname
                     a.weui_navbar_item(href='/logout')

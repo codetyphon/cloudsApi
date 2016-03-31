@@ -93,20 +93,6 @@ app.use(function (req, res, next) {
             site.title='lovelatter';
             site.subtitle='lovelatter';
             break;
-        case 'www.dobebox.com':
-            site.dir='crabpi';
-            site.logged_index='index';
-            site.unlogged_index='index';
-            site.title='dobebox';
-            site.subtitle='dobebox';
-            break;
-        case 'www.bielu.net':
-            site.dir='crabpi';
-            site.logged_index='index';
-            site.unlogged_index='index';
-            site.title='别撸';
-            site.subtitle='撸多了，对身体不好！';
-            break;
         case 'www.zhiwuchaxun.com':
             site.dir='crabpi';
             site.logged_index='index';
@@ -120,13 +106,6 @@ app.use(function (req, res, next) {
             site.unlogged_index='index';
             site.title='螃蟹派';
             site.subtitle='云主机';
-            break;
-        case 'www.bitchwho.com':
-            site.dir='bitchwho';
-            site.logged_index='home';
-            site.unlogged_index='signin';
-            site.title='碧池乎';
-            site.subtitle='矫情的不一定都是贱人';
             break;
         default :
             site.dir='snailpi';
