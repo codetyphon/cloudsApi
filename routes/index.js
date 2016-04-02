@@ -131,7 +131,7 @@ router.get('/switch/:id', function (req, res, next) {
     var id = req.params.id;
 
     db.get_one('switch', {'_id': ObjectId(id)}, function (switch_obj) {
-        res.render('snailpi/switch_info', {switch_obj: switch_obj, title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
+        res.render('snailpi/switch_info', {user: req.session.user, switch_obj: switch_obj, title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
     });
 
     //

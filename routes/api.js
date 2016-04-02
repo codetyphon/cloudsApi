@@ -115,6 +115,23 @@ router.get('/switch/:id', function (req, res, next) {
     //
 });
 
+router.get('/switch_all_count', function (req, res, next) {
+    db.getCount('switch', {}, function (count) {
+        res.json({
+            view: count
+        });
+    });
+});
+
+router.get('/user_all_count', function (req, res, next) {
+    db.getCount('users', {}, function (count) {
+        res.json({
+            view: count
+        });
+    });
+});
+
+
 /* switch on/off */
 router.get('/switch/:id/on', function (req, res, next) {
     var id=req.params.id;
