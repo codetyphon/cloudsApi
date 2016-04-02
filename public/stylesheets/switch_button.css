@@ -115,3 +115,9 @@ body.IE7 .Switch.Round {
     border-color: #ccc;
     padding: 5px;
 }
+.cell_middle.middle{
+    border-width: 0 1px 1px 0;
+    border-style: dotted;
+    border-color: #ccc;
+    padding: 5px;
+}

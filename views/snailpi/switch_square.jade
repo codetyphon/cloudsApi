@@ -1,0 +1,30 @@
+extends layout
+block content
+    link(rel='stylesheet', href='/snailpi/home.css')
+    link(rel='stylesheet', href='/snailpi/switch.css')
+    link(rel='stylesheet', href='/stylesheets/switch_button.css')
+    link(rel='stylesheet', href='/stylesheets/work.css')
+    link(rel='stylesheet', href='/stylesheets/switch_square.css')
+
+    div.mt10.panel-header
+        h2.fs18.tac='用户创建的云开关'
+    div.panel
+        div.table.full
+            div.left.cell_middle.tal.cell_header='开关名称'
+            div.middle.cell_middle.tal.cell_header='创建者'
+            div.right.cell_middle.tar.cell_header='开关状态'
+        -each switch_one in switch_arr
+            div.table.full
+                div.left.cell_middle.tal
+                    a(href='/switch/#{switch_one._id}')=switch_one.name
+                div.middle.cell_middle.tal
+                    a(href='/switch/#{switch_one._id}')=switch_one.onwer    
+                div.right.cell_middle.tar
+                    div(switch_id=switch_one._id).Switch.Round
+                        div.Toggle
+    div.table.full.tac.mt10
+        a.tac.full(href='/switch/create')='创建一个云开关'
+    div#back_to_top
+    script(src='/javascripts/jquery.imgloader.js')
+    script(src='/javascripts/jquery.backtotop.js')
+    script(src='/snailpi/home.js')

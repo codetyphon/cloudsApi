@@ -119,10 +119,24 @@ router.get('/switch', function (req, res, next) {
         res.render('snailpi/signin', {title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
     }
 });
+
+
+router.get('/switch_square', function (req, res, next) {
+    db.get('switch', {}, function (switch_arr) {
+            res.render('snailpi/switch_square', {
+                user: req.session.user,
+                switch_arr: switch_arr,
+                title: '蜗牛派 | 云开关',
+                subtitle: '一站式物联网解决方案'
+            });
+        });
+});
 router.get('/switch/create', function (req, res, next) {
     //
     if (req.session.user) {
-        res.render('snailpi/switch_create', {user: req.session.user, title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
+        res.render('snailpi/switch_create', {user: req.session.user, title: '创建云开关', subtitle: '一站式物联网解决方案'});
+    }else{
+        res.render('snailpi/signin', {title: '蜗牛派 | 云开关', subtitle: '一站式物联网解决方案'});
     }
 });
 
