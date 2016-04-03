@@ -13,7 +13,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/face', function (req, res, next) {
-    res.render('user', {user: req.session.user, title: 'user center'});
+    res.render('snailpi/user_face', {user: req.session.user, title: 'user face'});
 });
 
 router.get('/invite', function (req, res, next) {

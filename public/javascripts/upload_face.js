@@ -28,6 +28,15 @@ $(document).ready(function(){
                 }else{
                     d.imgs.map(function(v,index,imgs){
                         console.log(v);
+                        var face_url='/upload/'+v;
+                        $('.user_face').attr('src','/upload/'+v);
+                        $.post('/api/change_user_face',{face_url:face_url},function(d){
+                            if(d.err){
+                            }else{
+                                console.log('up face success');
+                            }
+                        });
+                        
                     });
                 }
             }

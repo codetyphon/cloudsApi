@@ -26,9 +26,8 @@ html
                     a.weui_navbar_item(href='/about')
                         p.weui_tabbar_label='捐赠'
                     a.weui_navbar_item(href='/user')
-                        p.weui_tabbar_label=user.fullname
-                    a.weui_navbar_item(href='/logout')
-                        p.weui_tabbar_label='退出'
+                        img.user_face(width='40',height='40',src='#{user.face}')
+                        //p.weui_tabbar_label=user.fullname
 
         div.box
             block content

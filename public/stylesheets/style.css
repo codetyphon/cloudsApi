@@ -180,3 +180,8 @@ h1{
 .mt10{
     margin-top: 10px;
 }
+
+.user_face{
+    border-radius: 50%;
+    margin: auto;
+}

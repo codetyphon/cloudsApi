@@ -1,0 +1,15 @@
+extends layout
+block content
+    link(rel='stylesheet', href='/snailpi/home.css')
+    link(rel='stylesheet', href='/stylesheets/work.css')
+
+    -if(user)
+        div.box.tac
+            img.user_face(width='200',height='200',src='#{user.face}')
+        div.box.tac
+            input#upimg(type='file')
+        
+    script(src="/javascripts/upload_face.js")
+    script(src='/javascripts/jquery.imgloader.js')
+    script(src='/javascripts/jquery.backtotop.js')
+    script(src='/snailpi/home.js')

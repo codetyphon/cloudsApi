@@ -70,7 +70,7 @@ router.post('/signup', function (req, res, next) {
                     var master=user.fullname;
                     var time=Date();
                     ip=req.client_ip;
-                    db.add('users',{fullname: fullname,passwd:passwd,master:master,register_time:time,register_ip:ip},function(user){
+                    db.add('users',{face:'/images/default_face.png',fullname: fullname,passwd:passwd,master:master,register_time:time,register_ip:ip},function(user){
                         if(user.err){
                             res.json({err: true,msg:'注册失败！'});
                         }else{
@@ -167,11 +167,24 @@ router.get('/switch/:id/off', function (req, res, next) {
         res.json({err:true,msg:'u are not login'});
     }
 });
-
+router.post('/change_user_face', function (req, res, next) {
+    var face_url=req.body.face_url;
+    if (req.session.user) {
+        console.log(req.session.user);
+        db.update('users',{'_id':ObjectId(req.session.user._id)},{face:face_url},function(result){
+                    result.err=false;
+                    req.session.user.face=face_url;
+                    res.json(result);
+        });
+    }else{
+        res.json({err:true,msg:'not login'});
+    }
+    
+});
 router.post('/uploadimg', function (req, res, next) {
     //
-
-    var formidable = require("formidable");
+    if (req.session.user) {
+        var formidable = require("formidable");
     var form = new formidable.IncomingForm();   //创建上传表单
     form.parse(req, function (err, fields, files) {
         var imgs = [];
@@ -197,13 +210,17 @@ router.post('/uploadimg', function (req, res, next) {
 
             fs.rename(file.path, uploadDir, function (err) {
                 if (err) {
-                    res.json(err);
+                    //res.json(err);
                 } else {
 
                 }
             });
         }
-        res.json(imgs);
+        res.json({err:false,imgs:imgs});
     });
+    }else{
+        res.json({err:true,msg:'not login'});
+    }
+    
 });
 module.exports = router;
