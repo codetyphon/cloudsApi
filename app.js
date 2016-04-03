@@ -46,10 +46,10 @@ app.use(function (req, res, next) {
             req.socket.remoteAddress ||
             req.connection.socket.remoteAddress;
     }
-
+    console.log(req.path);
     req.client_ip=getClientIp(req);
 
-    if (req.url != '/api/view') {
+    if (req.path.indexOf('api')===-1) {
         db.add('view', {
             host: req.headers.host,
             ip: getClientIp(req),
