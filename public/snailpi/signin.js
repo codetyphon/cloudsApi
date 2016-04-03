@@ -1,4 +1,10 @@
 $(document).ready(function(){
+    $(document).bind('keyup',function(e){
+        //console.log(e.keyCode);
+        if(e.keyCode===13){
+            $('.submit').click();
+        }
+    });
     $('.submit').bind('click',function(){
 
         var check=true;

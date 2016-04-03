@@ -6,7 +6,7 @@ block content
             span=invite
         p='你可以把这个链接发送给好友：'
         p='http://'+host+'/invite/'+invite
-        - if(invite_users)
+        - if(invite_users.length>0)
             p='你邀请了：'
         -each u in invite_users
             li
