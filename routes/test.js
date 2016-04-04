@@ -8,4 +8,8 @@ router.get('/', function(req, res, next) {
 router.get('/zootopia', function(req, res, next) {
   res.render('works/zootopia/zootopia',{title:'zootopia'});
 });
+
+router.get('/cat', function(req, res, next) {
+  res.render('works/cat',{title:'你认识几只猫?'});
+});
 module.exports = router;
