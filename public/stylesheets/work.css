@@ -148,12 +148,13 @@ p{
     text-align: justify;
 
 }
-.mt10{
-    margin-top: 10px;
-}
+
 .w95{
     width: 95%;
     margin: auto;
+}
+.mt10{
+    margin-top: 10px;
 }
 h2{
     line-height: 1.5em;

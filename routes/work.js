@@ -21,4 +21,8 @@ router.get('/tailand/des', function(req, res, next) {
   res.render('works/tailand/come_on_des',{title:'works'});
 });
 
+router.get('/huangxiangli', function(req, res, next) {
+  res.render('works/huangxiangli',{title:'剪了短发后，黄湘丽的人生开了挂'});
+});
+
 module.exports = router;
