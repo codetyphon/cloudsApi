@@ -1,0 +1,6 @@
+.pic{
+    width: 250px;
+    margin: auto;
+    border-radius: 50%;
+    border:solid 2px #ccc;
+}

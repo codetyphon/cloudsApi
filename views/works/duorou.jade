@@ -1,0 +1,25 @@
+extends wxlayout
+block content
+    link(rel='stylesheet', href='/test/duorou/style.css')
+    div.page.test
+        div.weui_msg
+            div.weui_text_area
+                p.weui_msg_desc='？'
+            div.weui_msg
+                div.weui_icon_area
+                    img.face()
+            div.weui_opr_area
+                div.weui_btn_area.btns
+                    div.weui_btn.weui_btn_default='1'
+                    div.weui_btn.weui_btn_default='1'
+    div.page.msg#over(style='display:none')
+        div.weui_msg
+            div.weui_text_area
+                p.weui_msg_desc
+                    span='你认识'
+                    span.count
+                    span='只猫！'
+        div.weui_opr_area
+            div.weui_btn_area
+                button.restart.weui_btn.weui_btn_default='重新测试'
+    script(src='/test/duorou/app.js')

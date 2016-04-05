@@ -12,4 +12,7 @@ router.get('/zootopia', function(req, res, next) {
 router.get('/cat', function(req, res, next) {
   res.render('works/cat',{title:'你认识几只猫?'});
 });
+router.get('/duorou', function(req, res, next) {
+  res.render('works/duorou',{title:'你认识几种多肉?'});
+});
 module.exports = router;
