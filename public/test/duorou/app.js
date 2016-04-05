@@ -95,7 +95,7 @@ $(document).ready(function () {
                         if($(this).attr('value')==='1'){
                             count+=1;
                             $('.count').text(count);
-                            share.title='我认识'+count+'只猫,不服来战！'
+                            share.title='我认识'+count+'种多肉,不服来战！'
                             updateShare(share);
                             
                             console.log('ok');
