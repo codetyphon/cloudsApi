@@ -6,7 +6,7 @@ $(document).ready(function(){
     function stopScrolling( touchEvent ) { 
         touchEvent.preventDefault(); 
     } 
-    $('.gong').bind('touchstart',stopScrolling);
+    //$('.gong').bind('touchstart',stopScrolling);
     $('.gong').bind('touchmove',stopScrolling);    
     $('.welcome').bind('touchend',function(){
         //$(this).slideUp("slow");
@@ -16,7 +16,7 @@ $(document).ready(function(){
     $('.welcome').bind('click',function(){
         //$(this).slideUp("slow");
         $(this).animate({top:"-100%"});
-        $('.gong').show();
+        $('.gong').css('display','table');
     });
     function show(num){
         $('.alert').hide();
