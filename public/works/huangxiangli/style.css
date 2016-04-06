@@ -51,7 +51,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 .alert_pan .alert .alert_msg{
     width: 80%;
@@ -65,11 +65,25 @@
     right: 10%;
 }
 .alert_pan .alert .alert_close {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     background: #f00;
-    right: -20px;
+    right: -15px;
     position: absolute;
-    top: -20px;
+    top: -15px;
     border-radius: 50%;
+}
+.alert_pan .alert .alert_close:after{
+    width: 30px;
+    height: 30px;
+    right: 0px;
+    position: absolute;
+    top: 0px;
+    content: 'x';
+    color: #fff;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    line-height: 30px;
 }

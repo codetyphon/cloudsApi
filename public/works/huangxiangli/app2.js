@@ -9,55 +9,52 @@ $(document).ready(function(){
         $(this).animate({top:"-100%"});
         $('.gong').show();
     });
-    
-    $('.act1').bind('click',function(){
+    function show(num){
         $('.alert').hide();
-        $('.text1').show();
+        $('.text'+num).css('width',0);
+        $('.text'+num).css('height',0);
+        $('.text'+num).css('margin','auto');
         $('.alert_pan').show();
+        $('.text'+num).show();
+        $('.text'+num).find('.alert_msg').hide();
+        $('.text'+num).animate({width:"80%",height:"80%",margin:"auto"},function(){
+            $(this).find('.alert_msg').show();
+        });
+    }
+    $('.act1').bind('click',function(){
+        show(1);
     });
     $('.act2').bind('click',function(){
-        $('.alert').hide();
-        $('.text2').show();
-        $('.alert_pan').show();
+        show(2);
     });
     $('.act3').bind('click',function(){
-        $('.alert').hide();
-        $('.text3').show();
-        $('.alert_pan').show();
+        show(3);
     });
     $('.act4').bind('click',function(){
-        $('.alert').hide();
-        $('.text4').show();
-        $('.alert_pan').show();
+        show(4);
     });
     $('.act5').bind('click',function(){
-        $('.alert').hide();
-        $('.text5').show();
-        $('.alert_pan').show();
+        show(5);
     });
     $('.act6').bind('click',function(){
-        $('.alert').hide();
-        $('.text6').show();
-        $('.alert_pan').show();
+        show(6);
     });
     $('.act7').bind('click',function(){
-        $('.alert').hide();
-        $('.text7').show();
-        $('.alert_pan').show();
+        show(7);
     });
     $('.act8').bind('click',function(){
-        $('.alert').hide();
-        $('.text8').show();
-        $('.alert_pan').show();
+        show(8);
     });
     $('.act9').bind('click',function(){
-        $('.alert').hide();
-        $('.text9').show();
-        $('.alert_pan').show();
+        show(9);
     });
     
     $('.alert_close').bind('click',function(){
-        $('.alert_pan').hide();
+        console.log($(this).parent().find('.alert_pan'));
+        $(this).parent().animate({width:"0",height:"0"},function(){
+            $(this).hide();
+            $(this).parent().hide();
+        });
     });
     //1）载入背景
     //2）logo旋转
