@@ -37,6 +37,7 @@ iframe{
 .upbtn img.up{
     margin: auto;
 }
+
 @keyframes arrowUp{
     0%{bottom:10%; opacity:0;} 30%{bottom:10%; opacity:1;} 100%{bottom:40%; opacity:0;} 
 }
