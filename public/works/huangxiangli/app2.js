@@ -4,6 +4,11 @@ $(document).ready(function(){
     updateShare(share);
     
     
+    $('.welcome').bind('touchend',function(){
+        //$(this).slideUp("slow");
+        $(this).animate({top:"-100%"});
+        $('.gong').show();
+    });
     $('.welcome').bind('click',function(){
         //$(this).slideUp("slow");
         $(this).animate({top:"-100%"});
