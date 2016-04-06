@@ -1,3 +1,6 @@
+.hide{
+    display: none;
+}
 .welcome{
     background: url('/works/huangxiangli/bg.png');
     background-size: 100% 100%;

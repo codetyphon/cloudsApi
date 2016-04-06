@@ -3,6 +3,11 @@ $(document).ready(function(){
     share.desc='蛰伏了许久，只等待着一个属于她的时间到来。就像一朵花，静候绽放。而现在，就是她的时间。';
     updateShare(share);
     
+    function stopScrolling( touchEvent ) { 
+        touchEvent.preventDefault(); 
+    } 
+    document.addEventListener('touchstart',stopScrolling,false); 
+    document.addEventListener('touchmove',stopScrolling,false); 
     
     $('.welcome').bind('touchend',function(){
         //$(this).slideUp("slow");
