@@ -30,11 +30,46 @@
     margin: auto;
 }
 @keyframes arrowUp{
-    0%{bottom:20%; opacity:0;} 30%{bottom:20%; opacity:1;} 100%{bottom:40%; opacity:0;} 
+    0%{bottom:10%; opacity:0;} 30%{bottom:20%; opacity:1;} 100%{bottom:40%; opacity:0;} 
 }
 @-moz-keyframes arrowUp{
-	0%{bottom:20%; opacity:0;} 30%{bottom:20%; opacity:1;} 100%{bottom:40%; opacity:0;} 
+	0%{bottom:10%; opacity:0;} 30%{bottom:20%; opacity:1;} 100%{bottom:40%; opacity:0;} 
 }
 @-webkit-keyframes arrowUp{
-    0%{bottom:20%; opacity:0;} 30%{bottom:20%; opacity:1;} 100%{bottom:40%; opacity:0;} 
+    0%{bottom:10%; opacity:0;} 30%{bottom:20%; opacity:1;} 100%{bottom:40%; opacity:0;} 
+}
+.alert_pan{
+    background: rgba(0,0,0,0.5);
+}
+.alert_pan .alert{
+    width: 80%;
+    height: 80%;
+    background: #fff;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 20px;
+}
+.alert_pan .alert .alert_msg{
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+}
+.alert_pan .alert .alert_close {
+    width: 40px;
+    height: 40px;
+    background: #f00;
+    right: -20px;
+    position: absolute;
+    top: -20px;
+    border-radius: 50%;
 }

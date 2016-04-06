@@ -5,7 +5,58 @@ $(document).ready(function(){
     
     
     $('.welcome').bind('click',function(){
-        $(this).slideUp("slow");
+        //$(this).slideUp("slow");
+        $(this).animate({top:"-100%"});
+    });
+    
+    $('.act1').bind('click',function(){
+        $('.alert').hide();
+        $('.text1').show();
+        $('.alert_pan').show();
+    });
+    $('.act2').bind('click',function(){
+        $('.alert').hide();
+        $('.text2').show();
+        $('.alert_pan').show();
+    });
+    $('.act3').bind('click',function(){
+        $('.alert').hide();
+        $('.text3').show();
+        $('.alert_pan').show();
+    });
+    $('.act4').bind('click',function(){
+        $('.alert').hide();
+        $('.text4').show();
+        $('.alert_pan').show();
+    });
+    $('.act5').bind('click',function(){
+        $('.alert').hide();
+        $('.text5').show();
+        $('.alert_pan').show();
+    });
+    $('.act6').bind('click',function(){
+        $('.alert').hide();
+        $('.text6').show();
+        $('.alert_pan').show();
+    });
+    $('.act7').bind('click',function(){
+        $('.alert').hide();
+        $('.text7').show();
+        $('.alert_pan').show();
+    });
+    $('.act8').bind('click',function(){
+        $('.alert').hide();
+        $('.text8').show();
+        $('.alert_pan').show();
+    });
+    $('.act9').bind('click',function(){
+        $('.alert').hide();
+        $('.text9').show();
+        $('.alert_pan').show();
+    });
+    
+    $('.alert_close').bind('click',function(){
+        $('.alert_pan').hide();
     });
     //1）载入背景
     //2）logo旋转
