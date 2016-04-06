@@ -4,8 +4,10 @@ $(document).ready(function(){
     updateShare(share);
     
     
+    var $link_work=$('<link rel="stylesheet" href="/stylesheets/work.css">');
     var $link=$('<link rel="stylesheet" href="/works/huangxiangli/style.css">');
     var $meta=$('<meta name="viewport" content="initial-scale=1.0,maximum-scale=1,user-scalable=no">');
+    $link_work.appendTo($("iframe").contents().find("head"));
     $link.appendTo($("iframe").contents().find("head"));
     $meta.appendTo($("iframe").contents().find("head"));
 
@@ -14,7 +16,11 @@ $(document).ready(function(){
     } 
     //$('.gong').bind('touchstart',stopScrolling);
     $('.gong').bind('touchmove',stopScrolling);    
+    $(document).bind('touchmove',stopScrolling);    
     $('.alert_pan').bind('touchmove',stopScrolling);    
+    $('.alert').bind('touchmove',stopScrolling);    
+    $('.alert_msg').bind('touchmove',stopScrolling);    
+    $('iframe').bind('touchmove',stopScrolling);    
     $('.welcome').bind('touchend',function(touchEvent){
         //$(this).slideUp("slow");
         touchEvent.preventDefault(); 
