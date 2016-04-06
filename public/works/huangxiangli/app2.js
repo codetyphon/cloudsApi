@@ -20,6 +20,9 @@ $(document).ready(function(){
     $('.alert_pan').bind('touchmove',stopScrolling);    
     $('.alert').bind('touchmove',stopScrolling);    
     $('.alert_msg').bind('touchmove',stopScrolling);    
+    $('iframe').bind('touchstart',function(){
+        $('frame').focus();
+    });    
     $('iframe').bind('touchmove',stopScrolling);    
     $('.welcome').bind('touchend',function(touchEvent){
         //$(this).slideUp("slow");

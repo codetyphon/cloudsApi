@@ -38,13 +38,13 @@ iframe{
     margin: auto;
 }
 @keyframes arrowUp{
-    0%{bottom:10%; opacity:0;} 30%{bottom:20%; opacity:1;} 100%{bottom:40%; opacity:0;} 
+    0%{bottom:10%; opacity:0;} 30%{bottom:10%; opacity:1;} 100%{bottom:40%; opacity:0;} 
 }
 @-moz-keyframes arrowUp{
-	0%{bottom:10%; opacity:0;} 30%{bottom:20%; opacity:1;} 100%{bottom:40%; opacity:0;} 
+	0%{bottom:10%; opacity:0;} 30%{bottom:10%; opacity:1;} 100%{bottom:40%; opacity:0;} 
 }
 @-webkit-keyframes arrowUp{
-    0%{bottom:10%; opacity:0;} 30%{bottom:20%; opacity:1;} 100%{bottom:40%; opacity:0;} 
+    0%{bottom:10%; opacity:0;} 30%{bottom:10%; opacity:1;} 100%{bottom:40%; opacity:0;} 
 }
 .alert_pan{
     background: rgba(0,0,0,0.5);
@@ -62,15 +62,15 @@ iframe{
     border-radius: 10px;
 }
 .alert_pan .alert .alert_msg{
-    width: 80%;
-    height: 80%;
+    width: 90%;
+    height: 90%;
     margin: auto;
     overflow: scroll;
     position: absolute;
-    top: 10%;
-    bottom: 10%;
-    left: 10%;
-    right: 10%;
+    top: 5%;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
     -webkit-overflow-scrolling:touch;
 }
 .alert_pan .alert .alert_close {
@@ -101,4 +101,10 @@ img.full{
 }
 .player{
     vertical-align: middle;
+}
+h3{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    padding: 10px 0 10px 0;
 }
