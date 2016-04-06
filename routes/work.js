@@ -25,4 +25,8 @@ router.get('/huangxiangli', function(req, res, next) {
   res.render('works/huangxiangli',{title:'剪了短发后，黄湘丽的人生开了挂'});
 });
 
+router.get('/huangxiangli2', function(req, res, next) {
+  res.render('works/huangxiangli2',{title:'剪了短发后，黄湘丽的人生开了挂'});
+});
+
 module.exports = router;

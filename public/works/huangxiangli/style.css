@@ -1,0 +1,40 @@
+.welcome{
+    background: url('/works/huangxiangli/bg.png');
+    background-size: 100% 100%;
+}
+.gong{
+    background: url('/works/huangxiangli/bg2.png');
+    background-size: 100% 100%;
+}
+.pan{
+    width: 80%;
+    margin: auto;
+    vertical-align: middle;
+}
+.gong img{
+    width: 80%;
+    padding: 10%;
+    margin: auto;
+    border-radius: 50%;
+}
+.upbtn{
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    animation:arrowUp 2.0s ease-in-out infinite;
+    -webkit-animation:arrowUp 2.0s ease-in-out infinite;
+    -moz-animation:arrowUp 2.0s ease-in-out infinite;
+}
+.upbtn img.up{
+    margin: auto;
+}
+@keyframes arrowUp{
+    0%{bottom:20%; opacity:0;} 30%{bottom:20%; opacity:1;} 100%{bottom:40%; opacity:0;} 
+}
+@-moz-keyframes arrowUp{
+	0%{bottom:20%; opacity:0;} 30%{bottom:20%; opacity:1;} 100%{bottom:40%; opacity:0;} 
+}
+@-webkit-keyframes arrowUp{
+    0%{bottom:20%; opacity:0;} 30%{bottom:20%; opacity:1;} 100%{bottom:40%; opacity:0;} 
+}
