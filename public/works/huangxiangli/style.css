@@ -1,6 +1,11 @@
 .hide{
     display: none;
 }
+iframe{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+}
 .welcome{
     background: url('/works/huangxiangli/bg.png');
     background-size: 100% 100%;
@@ -66,6 +71,7 @@
     bottom: 10%;
     left: 10%;
     right: 10%;
+    -webkit-overflow-scrolling:touch;
 }
 .alert_pan .alert .alert_close {
     width: 30px;
@@ -89,4 +95,7 @@
     margin: auto;
     text-align: center;
     line-height: 30px;
+}
+img.full{
+    width: 100%;
 }

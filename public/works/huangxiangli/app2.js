@@ -3,32 +3,37 @@ $(document).ready(function(){
     share.desc='蛰伏了许久，只等待着一个属于她的时间到来。就像一朵花，静候绽放。而现在，就是她的时间。';
     updateShare(share);
     
+    
+    var $link=$('<link rel="stylesheet" href="/works/huangxiangli/style.css">');
+    var $meta=$('<meta name="viewport" content="initial-scale=1.0,maximum-scale=1,user-scalable=no">');
+    $link.appendTo($("iframe").contents().find("head"));
+    $meta.appendTo($("iframe").contents().find("head"));
+
     function stopScrolling( touchEvent ) { 
         touchEvent.preventDefault(); 
     } 
     //$('.gong').bind('touchstart',stopScrolling);
     $('.gong').bind('touchmove',stopScrolling);    
-    $('.welcome').bind('touchend',function(){
+    $('.alert_pan').bind('touchmove',stopScrolling);    
+    $('.welcome').bind('touchend',function(touchEvent){
         //$(this).slideUp("slow");
-        $(this).animate({top:"-100%"});
-        $('.gong').show();
-    });
-    $('.welcome').bind('click',function(){
-        //$(this).slideUp("slow");
+        touchEvent.preventDefault(); 
         $(this).animate({top:"-100%"});
         $('.gong').css('display','table');
     });
+
     function show(num){
         $('.alert').hide();
-        $('.text'+num).css('width',0);
-        $('.text'+num).css('height',0);
-        $('.text'+num).css('margin','auto');
+        $('.text').css('width',0);
+        $('.text').css('height',0);
+        $('.text').css('margin','auto');
         $('.alert_pan').show();
-        $('.text'+num).show();
-        $('.text'+num).find('.alert_msg').hide();
-        $('.text'+num).animate({width:"80%",height:"80%",margin:"auto"},function(){
+        $('.text').show();
+        $('.text').find('.alert_msg').hide();
+        $('.text').animate({width:"80%",height:"80%",margin:"auto"},function(){
             $(this).find('.alert_msg').show();
         });
+        $("iframe").contents().find("body").html($('.text'+num).html());
     }
     $('.act1').bind('click',function(){
         show(1);
