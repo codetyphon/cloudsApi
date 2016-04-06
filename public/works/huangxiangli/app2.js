@@ -7,6 +7,7 @@ $(document).ready(function(){
     $('.welcome').bind('click',function(){
         //$(this).slideUp("slow");
         $(this).animate({top:"-100%"});
+        $('.gong').show();
     });
     
     $('.act1').bind('click',function(){
