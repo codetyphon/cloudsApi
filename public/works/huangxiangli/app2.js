@@ -6,9 +6,8 @@ $(document).ready(function(){
     function stopScrolling( touchEvent ) { 
         touchEvent.preventDefault(); 
     } 
-    document.addEventListener('touchstart',stopScrolling,false); 
-    document.addEventListener('touchmove',stopScrolling,false); 
-    
+    $('.gong').bind('touchstart',stopScrolling);
+    $('.gong').bind('touchmove',stopScrolling);    
     $('.welcome').bind('touchend',function(){
         //$(this).slideUp("slow");
         $(this).animate({top:"-100%"});
