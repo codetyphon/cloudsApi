@@ -27,6 +27,13 @@ router.get('/view', function (req, res, next) {
         });
     });
 });
+router.get('/view_url', function (req, res, next) {
+     var url = req.query.url;
+    //console.log(req.headers);
+    db.get('view',{url:url},function(result){
+        res.json(result);
+    });
+});
 
 router.post('/reg/:fullname', function (req, res, next) {
     var fullname = req.params.fullname;
