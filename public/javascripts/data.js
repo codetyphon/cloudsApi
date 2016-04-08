@@ -4,6 +4,7 @@ $(document).ready(function(){
     var ios_pv=0;
     var android_pv=0;
     var wx_pv=0;
+    var unknow_pv=0;
     
     data.map(function(one,index,arr){
         var ua=one.ua;
@@ -13,9 +14,10 @@ $(document).ready(function(){
         if(ua.indexOf('Android')!=-1){
             android_pv+=1;
         }
-        if(ua.indexOf('MicroMessenger ')!=-1){
+        if(ua.indexOf('MicroMessenger')!=-1){
             wx_pv+=1;
         }
+        unknow_pv=all_pv-ios_pv-android_pv;
     });
     
     $('.all_pv').text(all_pv);
@@ -75,7 +77,7 @@ $(document).ready(function(){
                     x : document.getElementById('main').offsetWidth / 2,
                     y : 45,
                     itemGap:12,
-                    data:['ios_pv','android_pv','wx_pv']
+                    data:['ios_pv','android_pv','wx_pv','unknow_pv']
                 },
                 toolbox: {
                     show : true,
@@ -136,6 +138,24 @@ $(document).ready(function(){
                             },
                             {
                                 value:all_pv-wx_pv,
+                                name:'invisible',
+                                itemStyle : placeHolderStyle
+                            }
+                        ]
+                    },
+                    {
+                        name:'4',
+                        type:'pie',
+                        clockWise:false,
+                        radius : [75, 100],
+                        itemStyle : dataStyle,
+                        data:[
+                            {
+                                value:unknow_pv, 
+                                name:'unknow_pv'
+                            },
+                            {
+                                value:all_pv-unknow_pv,
                                 name:'invisible',
                                 itemStyle : placeHolderStyle
                             }
