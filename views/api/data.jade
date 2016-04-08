@@ -12,7 +12,13 @@ block content
     p
         span='android PV:'
         span.android_pv='正在获取中...'
-    div#main(style='height:400px')    
+     
+    h2='操作系统'
+    div#Chart_os(style='height:400px')  
+    h2='设备'
+    div#Chart_pc_mobile(style='height:400px')  
+    h2='app'
+    div#Chart_app(style='height:400px')    
     script
         | var data=!{data};
     script(src='http://echarts.baidu.com/build/dist/echarts.js')    

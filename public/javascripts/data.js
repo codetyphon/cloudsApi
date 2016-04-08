@@ -53,6 +53,8 @@ $(document).ready(function(){
     }
     
     console.log(max_pv);
+    var min_radius=0;
+    var max_radius=90;
     
     $('.all_pv').text(all_pv);
     $('.ios_pv').text(ios_pv);
@@ -70,7 +72,10 @@ $(document).ready(function(){
             ],
             function (ec) {
                 // 基于准备好的dom，初始化echarts图表
-                var myChart = ec.init(document.getElementById('main')); 
+                var myChart_os = ec.init(document.getElementById('Chart_os')); 
+                var myChart_pc_mobile = ec.init(document.getElementById('Chart_pc_mobile')); 
+                var myChart_app = ec.init(document.getElementById('Chart_app')); 
+                
                 var dataStyle = {
                 normal: {
                     label: {show:false},
@@ -79,7 +84,7 @@ $(document).ready(function(){
             };
             
             //
-            option = {
+            option_os = {
                 tooltip : {
                     trigger: 'item',
                     formatter: "{a} <br/>{b} : {c} ({d}%)"
@@ -90,10 +95,10 @@ $(document).ready(function(){
                 calculable : false,
                 series : [
                     {
-                        name:'访问来源',
+                        name:'操作系统',
                         type:'pie',
                         selectedMode: 'single',
-                        radius : [60, 90],
+                        radius : [min_radius, max_radius],
 
                         // for funnel
                         x: '20%',
@@ -116,28 +121,30 @@ $(document).ready(function(){
                             {value:android_pv, name:'安卓'},
                             {value:unknow_pv, name:'未知'}
                         ]
-                    },
-                    {
-                        name:'访问来源',
-                        type:'pie',
-                        radius : [110, 140],
+                    }
+                ]
+            };
 
-                        // for funnel
-                        x: '60%',
-                        width: '35%',
-                        funnelAlign: 'left',
-                        max: 0,
-
-                        data:[
-                            {value:wx_pv, name:'微信'},
-                            {value:qq_pv, name:'QQ浏览器'},
-                            {value:dd_pv, name:'钉钉'}
-                        ]
-                    },
+                          
+            //
+            // 为echarts对象加载数据 
+            myChart_os.setOption(option_os); 
+                
+            //
+            option_pc_mobile = {
+                tooltip : {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                toolbox: {
+                    show : false
+                },
+                calculable : false,
+                series : [
                     {
                         name:'平台',
                         type:'pie',
-                        radius : [10, 40],
+                        radius : [min_radius, max_radius],
 
                         // for funnel
                         x: '60%',
@@ -151,12 +158,41 @@ $(document).ready(function(){
                         ]
                     }
                 ]
-            };
-
-                          
+            };    
             //
-            // 为echarts对象加载数据 
-            myChart.setOption(option); 
+            myChart_pc_mobile.setOption(option_pc_mobile); 
+            //
+            option_app = {
+                tooltip : {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                toolbox: {
+                    show : false
+                },
+                calculable : false,
+                series : [
+                    {
+                        name:'app',
+                        type:'pie',
+                        radius : [min_radius, max_radius],
+
+                        // for funnel
+                        x: '60%',
+                        width: '35%',
+                        funnelAlign: 'left',
+                        max: 0,
+
+                        data:[
+                            {value:wx_pv, name:'微信'},
+                            {value:qq_pv, name:'QQ浏览器'},
+                            {value:dd_pv, name:'钉钉'}
+                        ]
+                    }
+                ]
+            };  
+            //
+            myChart_app.setOption(option_app); 
         }
     );
     //
