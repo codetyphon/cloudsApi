@@ -43,7 +43,10 @@ router.get('/view_data', function (req, res, next) {
         var data=[];
         result.map(function(one){
             var ip=one.ip.replace('::ffff:','');
-            data.push({ip:ip,ua:one.ua,time:one.time});
+            var d=qqwry.searchIP(ip);
+            var city=d.Country;
+            city=city.split('市')[0];
+            data.push({ip:ip,ua:one.ua,time:one.time,city:city});
         });
         res.json(data);
     });
