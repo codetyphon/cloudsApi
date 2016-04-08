@@ -23,8 +23,25 @@ $(document).ready(function(){
     var Mobile_pv=0;
     var PC_pv=0;
     
+    //pinpai
     var HUAWEI_pv=0;
     var OPPO_pv=0;
+    var Nexus_pv=0;
+    var vivo_pv=0;
+    var one_pv=0;
+    var mi_pv=0;
+    var letv_pv=0;
+    var sanxing_pv=0;
+    
+    
+    //xinghao
+    
+    var R7Plus_pv=0;//oppo r7plus
+    var ONE_A2003_pv=0;//one 一加手机
+    var R831S_pv=0;//oppe
+    var SM_G900K_pv=0;//sanxing
+    
+    
     
     //NetType
     var NetType_WIFI_pv=0;
@@ -73,6 +90,36 @@ $(document).ready(function(){
         }
         if(ua.indexOf('OPPO')!=-1){
             OPPO_pv+=1;
+        }
+        
+        //xinghao
+        //
+        if(ua.indexOf('SM-N9005')!=-1){
+            sanxing_pv+=1;
+        }
+        if(ua.indexOf('ONE A2003')!=-1){
+            one_pv+=1;
+        }
+        if(ua.indexOf('R831S')!=-1){
+            OPPO_pv+=1;
+        }
+        if(ua.indexOf('SM-G900K')!=-1){
+            sanxing_pv+=1;
+        }
+        if(ua.indexOf('MI NOTE')!=-1){
+            mi_pv+=1;
+        }
+        if(ua.indexOf('MI 4LTE')!=-1){
+            mi_pv+=1;
+        }
+        if(ua.indexOf('m2')!=-1){
+            mi_pv+=1;
+        }
+        if(ua.indexOf('x600')!=-1){
+            letv_pv+=1;
+        }
+        if(ua.indexOf('Mi-4c')!=-1){
+            mi_pv+=1;
         }
     });
     
@@ -250,7 +297,7 @@ $(document).ready(function(){
                 legend: {
                     orient : 'vertical',
                     x : 'left',
-                    data:['华为:'+HUAWEI_pv,'OPPO:'+OPPO_pv,'iphone:'+iphone_pv]
+                    data:['华为:'+HUAWEI_pv,'OPPO:'+OPPO_pv,'iphone:'+iphone_pv,'三星:'+sanxing_pv,'乐视:'+letv_pv,'小米:'+mi_pv,'一加:'+one_pv,'vivo:'+vivo_pv]
                 },
                 series : [
                     {
@@ -267,7 +314,13 @@ $(document).ready(function(){
                         data:[
                             {value:HUAWEI_pv, name:'华为:'+HUAWEI_pv},
                             {value:OPPO_pv, name:'OPPO:'+OPPO_pv},
-                            {value:iphone_pv, name:'iphone:'+iphone_pv}
+                            {value:iphone_pv, name:'iphone:'+iphone_pv},
+                            {value:sanxing_pv, name:'三星:'+sanxing_pv},
+                            {value:letv_pv, name:'乐视:'+letv_pv},
+                            {value:mi_pv, name:'小米:'+mi_pv},
+                            {value:one_pv, name:'一加:'+one_pv},
+                            {value:vivo_pv, name:'vivo:'+vivo_pv}
+                            //var HUAWEI_pv/OPPO_pv/Nexus_pv/vivo_pv/one_pv/mi_pv/letv_pv/sanxing_pv
                         ]
                     }
                 ]
