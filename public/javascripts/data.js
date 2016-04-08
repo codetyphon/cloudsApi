@@ -1,5 +1,9 @@
 $(document).ready(function(){
     console.log(data);
+    
+    var min_radius=50;
+    var max_radius=70;
+    
     var all_pv=data.length;
     
     //平台
@@ -78,8 +82,7 @@ $(document).ready(function(){
     }
     
     console.log(max_pv);
-    var min_radius=0;
-    var max_radius=70;
+    
     
     $('.all_pv').text(all_pv);
     $('.ios_pv').text(ios_pv);
