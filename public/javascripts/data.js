@@ -224,7 +224,7 @@ $(document).ready(function(){
                 },
                 series : [
                     {
-                        name:'app',
+                        name:'品牌',
                         type:'pie',
                         radius : [min_radius, max_radius],
 

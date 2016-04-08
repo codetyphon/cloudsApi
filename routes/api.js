@@ -61,6 +61,10 @@ router.get('/view_data_html', function (req, res, next) {
     });
 });
 
+router.get('/ua', function (req, res, next) {
+    res.json(req.headers['user-agent']);
+});
+
 router.post('/reg/:fullname', function (req, res, next) {
     var fullname = req.params.fullname;
 });
