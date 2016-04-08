@@ -297,7 +297,7 @@ $(document).ready(function(){
                 legend: {
                     orient : 'vertical',
                     x : 'left',
-                    data:['华为:'+HUAWEI_pv,'OPPO:'+OPPO_pv,'iphone:'+iphone_pv,'三星:'+sanxing_pv,'乐视:'+letv_pv,'小米:'+mi_pv,'一加:'+one_pv,'vivo:'+vivo_pv]
+                    data:['华为:'+HUAWEI_pv,'OPPO:'+OPPO_pv,'苹果:'+iphone_pv,'三星:'+sanxing_pv,'乐视:'+letv_pv,'小米:'+mi_pv,'一加:'+one_pv,'vivo:'+vivo_pv]
                 },
                 series : [
                     {
@@ -314,7 +314,7 @@ $(document).ready(function(){
                         data:[
                             {value:HUAWEI_pv, name:'华为:'+HUAWEI_pv},
                             {value:OPPO_pv, name:'OPPO:'+OPPO_pv},
-                            {value:iphone_pv, name:'iphone:'+iphone_pv},
+                            {value:iphone_pv, name:'苹果:'+iphone_pv},
                             {value:sanxing_pv, name:'三星:'+sanxing_pv},
                             {value:letv_pv, name:'乐视:'+letv_pv},
                             {value:mi_pv, name:'小米:'+mi_pv},
