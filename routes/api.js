@@ -34,6 +34,32 @@ router.get('/view_url', function (req, res, next) {
         res.json(result);
     });
 });
+router.get('/view_data', function (req, res, next) {
+     var url = req.query.url;
+    //console.log(req.headers);
+    db.get('view',{url:url},function(result){
+        var data=[];
+        result.map(function(one){
+            var ip=one.ip.replace('::ffff:','');
+            data.push({ip:ip,ua:one.ua,time:one.time});
+        });
+        res.json(data);
+    });
+});
+
+router.get('/view_data_html', function (req, res, next) {
+     var url = req.query.url;
+    //console.log(req.headers);
+    db.get('view',{url:url},function(result){
+        var data=[];
+        result.map(function(one){
+            var ip=one.ip.replace('::ffff:','');
+            data.push({ip:ip,ua:one.ua,time:one.time});
+        });
+        var json_data=JSON.stringify(data);
+        res.render('api/data',{data:json_data,title:'数据可视化'});
+    });
+});
 
 router.post('/reg/:fullname', function (req, res, next) {
     var fullname = req.params.fullname;

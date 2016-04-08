@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    link(rel='stylesheet', href='/api/data.css')
+    h2='PV 统计'
+    p
+        span='总PV:'
+        span.all_pv
+    p
+        span='ios PV:'
+        span.ios_pv
+    p
+        span='android PV:'
+        span.android_pv
+    div#main(style='height:400px')    
+    script
+        | var data=!{data};
+    script(src='http://echarts.baidu.com/build/dist/echarts.js')    
+    script(src='/javascripts/data.js')    
+    
