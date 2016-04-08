@@ -5,6 +5,8 @@ var path = require('path');
 var router = express.Router();
 var db = require('../lib/db.js');
 var ObjectId = require('mongodb').ObjectID;
+var libqqwry = require('lib-qqwry');
+var qqwry = libqqwry.init();
 
 /* GET users listing. */
 router.get('/test', function (req, res, next) {
@@ -54,7 +56,12 @@ router.get('/view_data_html', function (req, res, next) {
         var data=[];
         result.map(function(one){
             var ip=one.ip.replace('::ffff:','');
-            data.push({ip:ip,ua:one.ua,time:one.time});
+            //
+            var d=qqwry.searchIP(ip);
+            var city=d.Country;
+            city=city.split('市')[0];
+            //
+            data.push({ip:ip,ua:one.ua,time:one.time,city:city});
         });
         var json_data=JSON.stringify(data);
         res.render('api/data',{data:json_data,title:'数据可视化'});
@@ -63,6 +70,23 @@ router.get('/view_data_html', function (req, res, next) {
 
 router.get('/ua', function (req, res, next) {
     res.json(req.headers['user-agent']);
+});
+
+router.get('/ip', function (req, res, next) {
+    var ip= req.headers['x-forwarded-for'] ||
+            req.connection.remoteAddress ||
+            req.socket.remoteAddress ||
+            req.connection.socket.remoteAddress;
+    ip=ip.replace('::ffff:','');
+    res.json(qqwry.searchIP(ip));
+});
+router.get('/ip/:ip', function (req, res, next) {
+    var ip= req.params.ip;
+    ip=ip.replace('::ffff:','');
+    var data=qqwry.searchIP(ip);
+    var city=data.Country;
+    city=city.split('市')[0];
+    res.json({ip:ip,city:city});
 });
 
 router.post('/reg/:fullname', function (req, res, next) {
