@@ -12,6 +12,9 @@ $(document).ready(function(){
     var dd_pv=0;
     var qq_pv=0;
     
+    var Mobile_pv=0;
+    var PC_pv=0;
+    
     var max_pv=0;
     
     data.map(function(one,index,arr){
@@ -31,9 +34,14 @@ $(document).ready(function(){
         if(ua.indexOf('DingTalk')!=-1){
             dd_pv+=1;
         }
+        if(ua.indexOf('Mobile')!=-1){
+            Mobile_pv+=1;
+        }
     });
     
     unknow_pv=all_pv-ios_pv-android_pv;    
+    
+    PC_pv=all_pv-Mobile_pv;
     if(max_pv<ios_pv){
         max_pv=ios_pv;
     }
@@ -85,7 +93,7 @@ $(document).ready(function(){
                         name:'访问来源',
                         type:'pie',
                         selectedMode: 'single',
-                        radius : [0, 70],
+                        radius : [60, 90],
 
                         // for funnel
                         x: '20%',
@@ -112,7 +120,7 @@ $(document).ready(function(){
                     {
                         name:'访问来源',
                         type:'pie',
-                        radius : [100, 140],
+                        radius : [110, 140],
 
                         // for funnel
                         x: '60%',
@@ -124,6 +132,22 @@ $(document).ready(function(){
                             {value:wx_pv, name:'微信'},
                             {value:qq_pv, name:'QQ浏览器'},
                             {value:dd_pv, name:'钉钉'}
+                        ]
+                    },
+                    {
+                        name:'平台',
+                        type:'pie',
+                        radius : [10, 40],
+
+                        // for funnel
+                        x: '60%',
+                        width: '35%',
+                        funnelAlign: 'left',
+                        max: 0,
+
+                        data:[
+                            {value:Mobile_pv, name:'移动端'},
+                            {value:PC_pv, name:'PC端'}
                         ]
                     }
                 ]
