@@ -93,31 +93,25 @@ $(document).ready(function(){
                     show : false
                 },
                 calculable : false,
+                legend: {
+                    orient : 'vertical',
+                    x : 'left',
+                    data:['ios:'+ios_pv,'安卓:'+android_pv,'未知:'+unknow_pv]
+                },
                 series : [
                     {
-                        name:'操作系统',
+                        name:'app',
                         type:'pie',
-                        selectedMode: 'single',
                         radius : [min_radius, max_radius],
 
                         // for funnel
-                        x: '20%',
-                        width: '40%',
-                        funnelAlign: 'right',
-                        max: max_pv,
+                        x: '60%',
+                        width: '35%',
+                        funnelAlign: 'left',
+                        max: 0,
 
-                        itemStyle : {
-                            normal : {
-                                label : {
-                                    position : 'inner'
-                                },
-                                labelLine : {
-                                    show : false
-                                }
-                            }
-                        },
                         data:[
-                            {value:ios_pv, name:'IOS'},
+                            {value:ios_pv, name:'ios'},
                             {value:android_pv, name:'安卓'},
                             {value:unknow_pv, name:'未知'}
                         ]
@@ -140,6 +134,11 @@ $(document).ready(function(){
                     show : false
                 },
                 calculable : false,
+                legend: {
+                    orient : 'vertical',
+                    x : 'left',
+                    data:['移动端:'+Mobile_pv,'PC端:'+PC_pv]
+                },
                 series : [
                     {
                         name:'平台',
@@ -171,6 +170,11 @@ $(document).ready(function(){
                     show : false
                 },
                 calculable : false,
+                legend: {
+                    orient : 'vertical',
+                    x : 'left',
+                    data:['微信:'+wx_pv,'QQ浏览器:'+qq_pv,'钉钉:'+dd_pv]
+                },
                 series : [
                     {
                         name:'app',
