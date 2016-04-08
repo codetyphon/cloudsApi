@@ -45,7 +45,7 @@ router.get('/view_data', function (req, res, next) {
             var ip=one.ip.replace('::ffff:','');
             var d=qqwry.searchIP(ip);
             var city=d.Country;
-            province=city.split('省')[0];
+            province=city.split('省')[0].split('市')[0];
             if(city.split('省').length==2){
                 city=city.split('省')[1].split('市')[0];
             }else{
@@ -69,7 +69,7 @@ router.get('/view_data_html', function (req, res, next) {
             //
             var d=qqwry.searchIP(ip);
             var city=d.Country;
-            province=city.split('省')[0];
+            province=city.split('省').split('市')[0];
             if(city.split('省').length==2){
                 city=city.split('省')[1].split('市')[0];
             }else{
