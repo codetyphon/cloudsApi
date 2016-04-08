@@ -238,7 +238,7 @@ $(document).ready(function(){
 
                         data:[
                             {value:HUAWEI_pv, name:'华为:'+HUAWEI_pv},
-                            {value:HUAWEI_pv, name:'华为:'+HUAWEI_pv},
+                            {value:OPPO_pv, name:'OPPO:'+OPPO_pv},
                             {value:iphone_pv, name:'iphone:'+iphone_pv}
                         ]
                     }
