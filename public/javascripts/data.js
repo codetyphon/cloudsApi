@@ -15,6 +15,8 @@ $(document).ready(function(){
     var Mobile_pv=0;
     var PC_pv=0;
     
+    var HUAWEI_pv=0;
+    var OPPO_pv=0;
     var max_pv=0;
     
     data.map(function(one,index,arr){
@@ -36,6 +38,14 @@ $(document).ready(function(){
         }
         if(ua.indexOf('Mobile')!=-1){
             Mobile_pv+=1;
+        }
+        
+        // pinpai
+        if(ua.indexOf('HUAWEI')!=-1){
+            HUAWEI_pv+=1;
+        }
+        if(ua.indexOf('OPPO')!=-1){
+            OPPO_pv+=1;
         }
     });
     
@@ -75,6 +85,7 @@ $(document).ready(function(){
                 var myChart_os = ec.init(document.getElementById('Chart_os')); 
                 var myChart_pc_mobile = ec.init(document.getElementById('Chart_pc_mobile')); 
                 var myChart_app = ec.init(document.getElementById('Chart_app')); 
+                var myChart_name = ec.init(document.getElementById('Chart_name')); 
                 
                 var dataStyle = {
                 normal: {
@@ -197,6 +208,40 @@ $(document).ready(function(){
             };  
             //
             myChart_app.setOption(option_app); 
+            option_name = {
+                tooltip : {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                toolbox: {
+                    show : false
+                },
+                calculable : false,
+                legend: {
+                    orient : 'vertical',
+                    x : 'left',
+                    data:['华为:'+HUAWEI_pv,'OPPO:'+OPPO_pv]
+                },
+                series : [
+                    {
+                        name:'app',
+                        type:'pie',
+                        radius : [min_radius, max_radius],
+
+                        // for funnel
+                        x: '60%',
+                        width: '35%',
+                        funnelAlign: 'left',
+                        max: 0,
+
+                        data:[
+                            {value:HUAWEI_pv, name:'华为:'+HUAWEI_pv},
+                            {value:OPPO_pv, name:'OPPO:'+OPPO_pv}
+                        ]
+                    }
+                ]
+            };  
+            myChart_name.setOption(option_name); 
         }
     );
     //
