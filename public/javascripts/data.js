@@ -1,7 +1,7 @@
 $(document).ready(function(){
     console.log(data);
     
-    var min_radius=50;
+    var min_radius=40;
     var max_radius=70;
     
     var all_pv=data.length;
