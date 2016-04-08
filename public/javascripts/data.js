@@ -77,7 +77,7 @@ $(document).ready(function(){
                     x : document.getElementById('main').offsetWidth / 2,
                     y : 45,
                     itemGap:12,
-                    data:['ios_pv','android_pv','wx_pv','unknow_pv']
+                    data:['ios','安卓','微信','未知']
                 },
                 toolbox: {
                     show : true,
@@ -90,7 +90,7 @@ $(document).ready(function(){
                 },
                 series : [
                     {
-                        name:'1',
+                        name:'ios',
                         type:'pie',
                         clockWise:false,
                         radius : [125, 150],
@@ -108,7 +108,7 @@ $(document).ready(function(){
                         ]
                     },
                     {
-                        name:'2',
+                        name:'安卓',
                         type:'pie',
                         clockWise:false,
                         radius : [100, 125],
@@ -126,7 +126,7 @@ $(document).ready(function(){
                         ]
                     },
                     {
-                        name:'3',
+                        name:'微信',
                         type:'pie',
                         clockWise:false,
                         radius : [75, 100],
@@ -144,7 +144,7 @@ $(document).ready(function(){
                         ]
                     },
                     {
-                        name:'4',
+                        name:'未知设备',
                         type:'pie',
                         clockWise:false,
                         radius : [75, 100],
