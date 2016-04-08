@@ -8,6 +8,8 @@ $(document).ready(function(){
     var unknow_pv=0;
     var iphone_pv=0;
     var windows_pv=0;
+    var Mac_pv=0;
+    var linux_pv=0;
     
     //客户端
     var wx_pv=0;
@@ -27,9 +29,6 @@ $(document).ready(function(){
             ios_pv+=1;
             iphone_pv+=1;
         }
-        if(ua.indexOf('Android')!=-1){
-            android_pv+=1;
-        }
         if(ua.indexOf('MicroMessenger')!=-1){
             wx_pv+=1;
         }
@@ -42,8 +41,18 @@ $(document).ready(function(){
         if(ua.indexOf('Mobile')!=-1){
             Mobile_pv+=1;
         }
+        //os
+        if(ua.indexOf('Android')!=-1){
+            android_pv+=1;
+        }
         if(ua.indexOf('Windows')!=-1){
             windows_pv+=1;
+        }
+        if(ua.indexOf('Mac')!=-1){
+            Mac_pv+=1;
+        }
+        if(ua.indexOf('Mac')!=-1){
+            Mac_pv+=1;
         }
         
         // pinpai
@@ -113,7 +122,7 @@ $(document).ready(function(){
                 legend: {
                     orient : 'vertical',
                     x : 'left',
-                    data:['ios:'+ios_pv,'安卓:'+android_pv,'Windows:'+windows_pv,'未知:'+unknow_pv]
+                    data:['ios:'+ios_pv,'安卓:'+android_pv,'Mac:'+Mac_pv,'Windows:'+windows_pv,'未知:'+unknow_pv]
                 },
                 series : [
                     {
@@ -131,6 +140,7 @@ $(document).ready(function(){
                             {value:ios_pv, name:'ios:'+ios_pv},
                             {value:android_pv, name:'安卓:'+android_pv},
                             {value:windows_pv, name:'windows:'+windows_pv},
+                            {value:Mac_pv, name:'Mac:'+Mac_pv},
                             {value:unknow_pv, name:'未知:'+unknow_pv}
                         ]
                     }
