@@ -1,11 +1,17 @@
 $(document).ready(function(){
     console.log(data);
     var all_pv=data.length;
+    
+    //平台
     var ios_pv=0;
     var android_pv=0;
-    var wx_pv=0;
     var unknow_pv=0;
+    
+    //客户端
+    var wx_pv=0;
     var dd_pv=0;
+    var qq_pv=0;
+    
     var max_pv=0;
     
     data.map(function(one,index,arr){
@@ -18,6 +24,9 @@ $(document).ready(function(){
         }
         if(ua.indexOf('MicroMessenger')!=-1){
             wx_pv+=1;
+        }
+        if(ua.indexOf('QQBrowser')!=-1){
+            qq_pv+=1;
         }
         if(ua.indexOf('DingTalk')!=-1){
             dd_pv+=1;
@@ -113,6 +122,7 @@ $(document).ready(function(){
 
                         data:[
                             {value:wx_pv, name:'微信'},
+                            {value:qq_pv, name:'QQ浏览器'},
                             {value:dd_pv, name:'钉钉'}
                         ]
                     }
