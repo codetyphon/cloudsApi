@@ -76,17 +76,11 @@ $(document).ready(function(){
                     orient : 'vertical',
                     x : document.getElementById('main').offsetWidth / 2,
                     y : 45,
-                    itemGap:12,
+                    itemGap:4,
                     data:['ios','安卓','微信','未知']
                 },
                 toolbox: {
-                    show : true,
-                    feature : {
-                        mark : {show: true},
-                        dataView : {show: true, readOnly: false},
-                        restore : {show: true},
-                        saveAsImage : {show: true}
-                    }
+                    show : false
                 },
                 series : [
                     {
