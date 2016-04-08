@@ -6,6 +6,7 @@ $(document).ready(function(){
     var ios_pv=0;
     var android_pv=0;
     var unknow_pv=0;
+    var iphone_pv=0;
     
     //客户端
     var wx_pv=0;
@@ -23,6 +24,7 @@ $(document).ready(function(){
         var ua=one.ua;
         if(ua.indexOf('iPhone')!=-1){
             ios_pv+=1;
+            iphone_pv+=1;
         }
         if(ua.indexOf('Android')!=-1){
             android_pv+=1;
@@ -220,7 +222,7 @@ $(document).ready(function(){
                 legend: {
                     orient : 'vertical',
                     x : 'left',
-                    data:['华为:'+HUAWEI_pv,'OPPO:'+OPPO_pv]
+                    data:['华为:'+HUAWEI_pv,'OPPO:'+OPPO_pv,'iphone:'+iphone_pv]
                 },
                 series : [
                     {
@@ -236,7 +238,8 @@ $(document).ready(function(){
 
                         data:[
                             {value:HUAWEI_pv, name:'华为:'+HUAWEI_pv},
-                            {value:OPPO_pv, name:'OPPO:'+OPPO_pv}
+                            {value:HUAWEI_pv, name:'华为:'+HUAWEI_pv},
+                            {value:iphone_pv, name:'iphone:'+iphone_pv}
                         ]
                     }
                 ]
