@@ -100,7 +100,7 @@ $(document).ready(function(){
                 },
                 series : [
                     {
-                        name:'app',
+                        name:'操作系统',
                         type:'pie',
                         radius : [min_radius, max_radius],
 
@@ -111,9 +111,9 @@ $(document).ready(function(){
                         max: 0,
 
                         data:[
-                            {value:ios_pv, name:'ios'},
-                            {value:android_pv, name:'安卓'},
-                            {value:unknow_pv, name:'未知'}
+                            {value:ios_pv, name:'ios:'+ios_pv},
+                            {value:android_pv, name:'安卓:'+android_pv},
+                            {value:unknow_pv, name:'未知:'+unknow_pv}
                         ]
                     }
                 ]
@@ -152,8 +152,8 @@ $(document).ready(function(){
                         max: 0,
 
                         data:[
-                            {value:Mobile_pv, name:'移动端'},
-                            {value:PC_pv, name:'PC端'}
+                            {value:Mobile_pv, name:'移动端:'+Mobile_pv},
+                            {value:PC_pv, name:'PC端:'+PC_pv}
                         ]
                     }
                 ]
@@ -188,9 +188,9 @@ $(document).ready(function(){
                         max: 0,
 
                         data:[
-                            {value:wx_pv, name:'微信'},
-                            {value:qq_pv, name:'QQ浏览器'},
-                            {value:dd_pv, name:'钉钉'}
+                            {value:wx_pv, name:'微信:'+wx_pv},
+                            {value:qq_pv, name:'QQ浏览器:'+qq_pv},
+                            {value:dd_pv, name:'钉钉:'+dd_pv}
                         ]
                     }
                 ]
