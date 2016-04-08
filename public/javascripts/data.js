@@ -44,7 +44,7 @@ $(document).ready(function(){
                     legend: {
                         orient : 'vertical',
                         x : 'left',
-                        data:['ios客户端','android客户端']
+                        data:['ios','android']
                     },
                     toolbox: {
                         show : false
@@ -57,8 +57,8 @@ $(document).ready(function(){
                             radius : '55%',
                             center: ['50%', '60%'],
                             data:[
-                                {value:ios_pv, name:'ios客户端'},
-                                {value:android_pv, name:'android客户端'}
+                                {value:ios_pv, name:'ios'},
+                                {value:android_pv, name:'android'}
                             ]
                         }
                     ]
