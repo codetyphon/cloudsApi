@@ -25,6 +25,9 @@ $(document).ready(function(){
     
     var HUAWEI_pv=0;
     var OPPO_pv=0;
+    
+    //NetType
+    var NetType_WIFI_pv=0;
     var max_pv=0;
     
     data.map(function(one,index,arr){
@@ -58,6 +61,11 @@ $(document).ready(function(){
         if(ua.indexOf('Mac')!=-1){
             Mac_pv+=1;
         }
+        //NetType/WIFI
+        if(ua.indexOf('NetType/WIFI')!=-1){
+            NetType_WIFI_pv+=1;
+        }
+        
         
         // pinpai
         if(ua.indexOf('HUAWEI')!=-1){
@@ -104,6 +112,7 @@ $(document).ready(function(){
                 var myChart_pc_mobile = ec.init(document.getElementById('Chart_pc_mobile')); 
                 var myChart_app = ec.init(document.getElementById('Chart_app')); 
                 var myChart_name = ec.init(document.getElementById('Chart_name')); 
+                var myChart_NetType = ec.init(document.getElementById('Chart_NetType')); 
                 
                 var dataStyle = {
                 normal: {
@@ -264,6 +273,40 @@ $(document).ready(function(){
                 ]
             };  
             myChart_name.setOption(option_name); 
+            option_NetType = {
+                tooltip : {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                toolbox: {
+                    show : false
+                },
+                calculable : false,
+                legend: {
+                    orient : 'vertical',
+                    x : 'left',
+                    data:['wifi:'+NetType_WIFI_pv,'未知:'+(all_pv-NetType_WIFI_pv)]
+                },
+                series : [
+                    {
+                        name:'连接方式',
+                        type:'pie',
+                        radius : [min_radius, max_radius],
+
+                        // for funnel
+                        x: '60%',
+                        width: '35%',
+                        funnelAlign: 'left',
+                        max: 0,
+
+                        data:[
+                            {value:NetType_WIFI_pv, name:'wifi:'+NetType_WIFI_pv},
+                            {value:all_pv-NetType_WIFI_pv, name:'未知:'+(all_pv-NetType_WIFI_pv)}
+                        ]
+                    }
+                ]
+            };    
+            myChart_NetType.setOption(option_NetType); 
         }
     );
     //
