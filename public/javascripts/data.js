@@ -47,6 +47,17 @@ $(document).ready(function(){
     var NetType_WIFI_pv=0;
     var max_pv=0;
     
+    
+    function get_province_count(city){
+        var count=0;
+        data.map(function(one,index,arr){
+            if(city===one.province){
+                count+=1;
+            }
+        });
+        return count;         
+    }
+    
     data.map(function(one,index,arr){
         var ua=one.ua;
         if(ua.indexOf('iPhone')!=-1){
@@ -151,7 +162,8 @@ $(document).ready(function(){
     require(
             [
                 'echarts',
-                'echarts/chart/pie' // 使用柱状图就加载bar模块，按需加载
+                'echarts/chart/pie', // 使用柱状图就加载bar模块，按需加载
+                'echarts/chart/map'
             ],
             function (ec) {
                 // 基于准备好的dom，初始化echarts图表
@@ -364,8 +376,8 @@ $(document).ready(function(){
             //
             option_map = {
                 title : {
-                    text: 'iphone销量',
-                    subtext: '纯属虚构',
+                    text: '',
+                    subtext: '',
                     x:'center'
                 },
                 dataRange: {
@@ -387,40 +399,40 @@ $(document).ready(function(){
                             emphasis:{label:{show:true}}
                         },
                         data:[
-                            {name: '北京',value: Math.round(Math.random()*1000)},
-                            {name: '天津',value: Math.round(Math.random()*1000)},
-                            {name: '上海',value: Math.round(Math.random()*1000)},
-                            {name: '重庆',value: Math.round(Math.random()*1000)},
-                            {name: '河北',value: Math.round(Math.random()*1000)},
-                            {name: '河南',value: Math.round(Math.random()*1000)},
-                            {name: '云南',value: Math.round(Math.random()*1000)},
-                            {name: '辽宁',value: Math.round(Math.random()*1000)},
-                            {name: '黑龙江',value: Math.round(Math.random()*1000)},
-                            {name: '湖南',value: Math.round(Math.random()*1000)},
-                            {name: '安徽',value: Math.round(Math.random()*1000)},
-                            {name: '山东',value: Math.round(Math.random()*1000)},
-                            {name: '新疆',value: Math.round(Math.random()*1000)},
-                            {name: '江苏',value: Math.round(Math.random()*1000)},
-                            {name: '浙江',value: Math.round(Math.random()*1000)},
-                            {name: '江西',value: Math.round(Math.random()*1000)},
-                            {name: '湖北',value: Math.round(Math.random()*1000)},
-                            {name: '广西',value: Math.round(Math.random()*1000)},
-                            {name: '甘肃',value: Math.round(Math.random()*1000)},
-                            {name: '山西',value: Math.round(Math.random()*1000)},
-                            {name: '内蒙古',value: Math.round(Math.random()*1000)},
-                            {name: '陕西',value: Math.round(Math.random()*1000)},
-                            {name: '吉林',value: Math.round(Math.random()*1000)},
-                            {name: '福建',value: Math.round(Math.random()*1000)},
-                            {name: '贵州',value: Math.round(Math.random()*1000)},
-                            {name: '广东',value: Math.round(Math.random()*1000)},
-                            {name: '青海',value: Math.round(Math.random()*1000)},
-                            {name: '西藏',value: Math.round(Math.random()*1000)},
-                            {name: '四川',value: Math.round(Math.random()*1000)},
-                            {name: '宁夏',value: Math.round(Math.random()*1000)},
-                            {name: '海南',value: Math.round(Math.random()*1000)},
-                            {name: '台湾',value: Math.round(Math.random()*1000)},
-                            {name: '香港',value: Math.round(Math.random()*1000)},
-                            {name: '澳门',value: Math.round(Math.random()*1000)}
+                            {name: '北京',value: get_province_count('北京')},
+                            {name: '天津',value: get_province_count('天津')},
+                            {name: '上海',value: get_province_count('上海')},
+                            {name: '重庆',value: get_province_count('重庆')},
+                            {name: '河北',value: get_province_count('河北')},
+                            {name: '河南',value: get_province_count('河南')},
+                            {name: '云南',value: get_province_count('云南')},
+                            {name: '辽宁',value: get_province_count('辽宁')},
+                            {name: '黑龙江',value: get_province_count('黑龙江')},
+                            {name: '湖南',value: get_province_count('湖南')},
+                            {name: '安徽',value: get_province_count('安徽')},
+                            {name: '山东',value: get_province_count('山东')},
+                            {name: '新疆',value: get_province_count('新疆')},
+                            {name: '江苏',value: get_province_count('江苏')},
+                            {name: '浙江',value: get_province_count('浙江')},
+                            {name: '江西',value: get_province_count('江西')},
+                            {name: '湖北',value: get_province_count('湖北')},
+                            {name: '广西',value: get_province_count('广西')},
+                            {name: '甘肃',value: get_province_count('甘肃')},
+                            {name: '山西',value: get_province_count('山西')},
+                            {name: '内蒙古',value: get_province_count('内蒙古')},
+                            {name: '陕西',value: get_province_count('陕西')},
+                            {name: '吉林',value: get_province_count('吉林')},
+                            {name: '福建',value: get_province_count('福建')},
+                            {name: '贵州',value: get_province_count('贵州')},
+                            {name: '广东',value: get_province_count('广东')},
+                            {name: '青海',value: get_province_count('青海')},
+                            {name: '西藏',value: get_province_count('西藏')},
+                            {name: '四川',value: get_province_count('四川')},
+                            {name: '宁夏',value: get_province_count('宁夏')},
+                            {name: '海南',value: get_province_count('海南')},
+                            {name: '台湾',value: get_province_count('台湾')},
+                            {name: '香港',value: get_province_count('香港')},
+                            {name: '澳门',value: get_province_count('澳门')}
                         ]
                     }
                 ]
