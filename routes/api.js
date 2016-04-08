@@ -45,8 +45,10 @@ router.get('/view_data', function (req, res, next) {
             var ip=one.ip.replace('::ffff:','');
             var d=qqwry.searchIP(ip);
             var city=d.Country;
-            city=city.split('市')[0];
-            data.push({ip:ip,ua:one.ua,time:one.time,city:city});
+            province=city.split('省')[0];
+            city=city.split('省')[0].split('市')[0];
+            
+            data.push({ip:ip,ua:one.ua,time:one.time,province:province,city:city});
         });
         res.json(data);
     });
@@ -62,9 +64,10 @@ router.get('/view_data_html', function (req, res, next) {
             //
             var d=qqwry.searchIP(ip);
             var city=d.Country;
-            city=city.split('市')[0];
+            province=city.split('省')[0];
+            city=city.split('省')[0].split('市')[0];
             //
-            data.push({ip:ip,ua:one.ua,time:one.time,city:city});
+            data.push({ip:ip,ua:one.ua,time:one.time,province:province,city:city});
         });
         var json_data=JSON.stringify(data);
         res.render('api/data',{data:json_data,title:'数据可视化'});
