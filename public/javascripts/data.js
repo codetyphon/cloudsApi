@@ -186,7 +186,7 @@ $(document).ready(function(){
                 legend: {
                     orient : 'vertical',
                     x : 'left',
-                    data:['微信:'+wx_pv,'QQ浏览器:'+qq_pv,'钉钉:'+dd_pv]
+                    data:['微信:'+wx_pv,'QQ浏览器:'+qq_pv,'钉钉:'+dd_pv,'其他app:'+all_pv-wx_pv-qq_pv-dd_pv]
                 },
                 series : [
                     {
@@ -203,7 +203,8 @@ $(document).ready(function(){
                         data:[
                             {value:wx_pv, name:'微信:'+wx_pv},
                             {value:qq_pv, name:'QQ浏览器:'+qq_pv},
-                            {value:dd_pv, name:'钉钉:'+dd_pv}
+                            {value:dd_pv, name:'钉钉:'+dd_pv},
+                            {value:all_pv-wx_pv-qq_pv-dd_pv, name:'其他app:'+all_pv-wx_pv-qq_pv-dd_pv}
                         ]
                     }
                 ]
