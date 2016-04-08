@@ -66,7 +66,7 @@ $(document).ready(function(){
     
     console.log(max_pv);
     var min_radius=0;
-    var max_radius=90;
+    var max_radius=70;
     
     $('.all_pv').text(all_pv);
     $('.ios_pv').text(ios_pv);
