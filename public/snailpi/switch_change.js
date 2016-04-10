@@ -10,20 +10,20 @@ $(document).ready(function(){
     $('.Switch').click(function() {
         $(this).toggleClass('on').toggleClass('off');
         var switch_id=$(this).attr('switch_id');
+        var url='';
         if($(this).attr('class').indexOf('off')!=-1){
             //
             console.log('off');
-            $.getJSON('/api/switch/'+switch_id+'/off',function(d){
-                console.log(d);
-            });
-
+            url='/api/switch/'+switch_id+'/off';
         }
         if($(this).attr('class').indexOf('on')!=-1){
             //
             console.log('on');
-            $.getJSON('/api/switch/'+switch_id+'/on',function(d){
-                console.log(d);
-            });
+            url='/api/switch/'+switch_id+'/on';
         }
+        console.log(url);
+        $.getJSON(url,function(d){
+            console.log(d);
+        });
     });
 });
