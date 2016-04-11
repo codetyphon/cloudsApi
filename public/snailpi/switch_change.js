@@ -21,7 +21,7 @@ $(document).ready(function(){
             console.log('on');
             url='/api/switch/'+switch_id+'/on';
         }
-        console.log(url);
+        //console.log(url);
         $.getJSON(url,function(d){
             console.log(d);
         });
